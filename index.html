@@ -4,23 +4,142 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A/Normal — Ressources officielles</title>
+  <meta name="description" content="Ressources officielles du jeu de rôle A/Normal — par Aurore Darcissac. Téléchargez ici les fiches vierges et supports de jeu.">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2910/2910768.png" type="image/png">
   <style>
-    body { font-family: Arial, sans-serif; background: #0d0d0d; color: #f5f5f5; text-align: center; padding: 50px; }
-    h1 { color: #ffb300; margin-bottom: 10px; }
-    p { color: #ddd; margin-bottom: 30px; }
-    a { display: block; margin: 10px auto; width: fit-content; padding: 10px 20px; background: #1e1e1e; border-radius: 8px; text-decoration: none; color: #00bcd4; font-weight: bold; transition: 0.2s; }
-    a:hover { background: #00bcd4; color: #0d0d0d; }
-    footer { margin-top: 40px; font-size: 0.8em; color: #888; }
+    /* ---- Base ---- */
+    :root {
+      --accent: #ffb300;
+      --bg: #0c0c0c;
+      --text: #f5f5f5;
+      --muted: #b3b3b3;
+      --link: #00bcd4;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: linear-gradient(180deg, #0c0c0c 0%, #1a1a1a 100%);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      animation: fadeIn 1s ease;
+    }
+
+    header img {
+      width: 90px;
+      height: 90px;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 0 8px #ffb300);
+    }
+
+    h1 {
+      font-size: 2.2em;
+      color: var(--accent);
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      color: var(--muted);
+      font-size: 1.1em;
+      margin-bottom: 30px;
+      font-weight: 400;
+    }
+
+    /* ---- Boutons ---- */
+    .download {
+      display: block;
+      margin: 15px auto;
+      padding: 14px 22px;
+      width: fit-content;
+      text-decoration: none;
+      color: var(--link);
+      border: 2px solid var(--link);
+      border-radius: 10px;
+      font-weight: 600;
+      transition: all 0.25s ease;
+    }
+
+    .download:hover {
+      background: var(--link);
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    /* ---- Section Info ---- */
+    .section {
+      max-width: 600px;
+      margin: 30px auto;
+      text-align: center;
+      line-height: 1.6em;
+      font-size: 1em;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8em; }
+      .download { width: 80%; }
+    }
   </style>
 </head>
+
 <body>
-  <h1>Ressources du jeu <em>A/Normal</em></h1>
-  <p>Téléchargez les supports complémentaires de votre livret :</p>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/609/609803.png" alt="Icône A/Normal">
+    <h1>A/Normal</h1>
+    <h2>Ressources officielles du jeu — Aurore Darcissac</h2>
+  </header>
 
-  <a href="pdf/Fiche-joueur-vierge.pdf" download>📄 Fiche personnage vierge</a>
-  <a href="pdf/Fiche-PNJ-vierge.pdf" download>📄 Fiche PNJ vierge</a>
-  <a href="pdf/Joueur-renommée.pdf" download>📊 Fiche de renommée des joueurs</a>
+  <div class="section">
+    <p>Bienvenue sur la page officielle des supports de jeu <strong>A/Normal</strong>.<br>
+    Ici, vous pouvez télécharger les fiches vierges, les tableaux de compétences et autres ressources pour enrichir vos parties.</p>
+  </div>
 
-  <footer>© Aurore Darcissac — 2025<br>Tous droits réservés</footer>
+  <a class="download" href="pdf/Fiche-joueur-vierge.pdf" download>📄 Fiche personnage vierge</a>
+  <a class="download" href="pdf/Fiche-PNJ-vierge.pdf" download>👤 Fiche PNJ vierge</a>
+  <a class="download" href="pdf/Joueur-renommée.pdf" download>📊 Renommée des joueurs</a>
+
+  <div class="section">
+    <p>Ces documents sont offerts avec l’achat du livret officiel.<br>
+    Merci de soutenir le travail d’auteurs indépendants 💛</p>
+  </div>
+
+  <footer>
+    © Aurore Darcissac — 2025 · Tous droits réservés ·
+    <a href="mailto:contact@anormal-rpg.fr">contact@anormal-rpg.fr</a>
+  </footer>
 </body>
 </html>
