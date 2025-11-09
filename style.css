@@ -46,7 +46,7 @@ h1 {
 }
 
 h2 {
-  color: var(--muted);
+  color: var(--accent);
   font-size: 1.1em;
   margin-bottom: 30px;
   font-weight: 400;
@@ -70,6 +70,30 @@ h2 {
   background: var(--link);
   color: #000;
   transform: scale(1.05);
+}
+
+/* ---- Buy Me a Coffee ---- */
+.buymeacoffee-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, #FFDD00 0%, #FFB800 100%);
+  border: 2px solid #FFDD00;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 221, 0, 0.3);
+}
+
+.buymeacoffee-btn:hover {
+  background: linear-gradient(135deg, #FFB800 0%, #FF9500 100%);
+  border-color: #FFB800;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 221, 0, 0.5);
+  color: #fff;
 }
 
 /* ---- Section Info ---- */
@@ -103,5 +127,9 @@ footer a {
 @media (max-width: 600px) {
   h1 { font-size: 1.8em; }
   .download { width: 80%; }
+  .buymeacoffee-btn {
+    font-size: 0.9em;
+    padding: 10px 20px;
+  }
 }
 
