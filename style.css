@@ -64,6 +64,7 @@ h2 {
   border-radius: 10px;
   font-weight: 600;
   transition: all 0.25s ease;
+  min-width: 300px;
 }
 
 .download:hover {
