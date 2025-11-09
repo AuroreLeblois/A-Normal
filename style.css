@@ -109,6 +109,9 @@ h2 {
   font-size: 1em;
   color: var(--muted);
 }
+.lower-section {
+    flex-direction: column
+}
 .wrap {
     display: flex;
     gap: 1rem;
