@@ -1,0 +1,47 @@
+{
+  "sections": [
+    {
+      "id": "fiches-vierges",
+      "title": "Fiches vierges",
+      "icon": "📝",
+      "files": [
+        {
+          "path": "pdf/Fiche-joueur-vierge.pdf",
+          "icon": "📄",
+          "label": "Fiche personnage vierge"
+        },
+        {
+          "path": "pdf/Fiche-PNJ-vierge.pdf",
+          "icon": "👤",
+          "label": "Fiche PNJ vierge"
+        },
+        {
+          "path": "pdf/vierges/PJ-renommée.pdf",
+          "icon": "📊",
+          "label": "Renommée des joueurs"
+        }
+      ]
+    },
+    {
+      "id": "joueurs",
+      "title": "Pour les joueurs",
+      "icon": "🎲",
+      "files": [],
+      "placeholder": "À venir (à la sortie du livret)"
+    },
+    {
+      "id": "scenario-1",
+      "title": "Ressources scénario 1",
+      "icon": "📖",
+      "files": [],
+      "placeholder": "À venir (à la sortie du livret)"
+    },
+    {
+      "id": "plans",
+      "title": "Plans",
+      "icon": "🗺️",
+      "files": [],
+      "placeholder": "À venir (à la sortie du livret)"
+    }
+  ]
+}

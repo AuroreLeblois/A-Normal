@@ -8,6 +8,13 @@ on:
     paths:
       - 'index.html'
       - 'style.css'
+      - 'app.ts'
+      - 'tsconfig.json'
+      - 'resources.json'
+      - 'pdf/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - '.github/workflows/static.yml'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -25,7 +32,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
+  # Build and deploy
   deploy:
     environment:
       name: github-pages
@@ -34,13 +41,40 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build TypeScript
+        run: pnpm run build
+
+      - name: Verify build output
+        run: |
+          echo "✅ Vérification des fichiers générés..."
+          test -f app.js && echo "   app.js OK" || exit 1
+          test -f index.html && echo "   index.html OK" || exit 1
+          test -f resources.json && echo "   resources.json OK" || exit 1
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
           path: '.'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

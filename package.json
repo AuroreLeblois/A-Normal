@@ -1,0 +1,28 @@
+{
+  "name": "a-normal",
+  "version": "1.0.0",
+  "description": "Site de téléchargement de ressources PDF en lien avec l'univers du RPG **A/Normal** par Aurore Darcissac.\r https://auroreleblois.github.io/A-Normal/",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "serve -l 3000",
+    "dev": "tsc && serve -l 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AuroreLeblois/A-Normal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AuroreLeblois/A-Normal/issues"
+  },
+  "homepage": "https://github.com/AuroreLeblois/A-Normal#readme",
+  "devDependencies": {
+    "serve": "^14.2.5",
+    "typescript": "^5.9.3"
+  }
+}

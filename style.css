@@ -113,6 +113,32 @@ h2 {
 .lower-section {
     flex-direction: column
 }
+
+/* ---- Container principal ---- */
+#resources-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---- Placeholder ---- */
+.placeholder {
+  color: var(--muted);
+  font-style: italic;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ---- Erreur ---- */
+.error {
+  color: #ff5252;
+  background: rgba(255, 82, 82, 0.1);
+  border: 1px solid #ff5252;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+}
 .wrap {
     display: flex;
     gap: 1rem;
