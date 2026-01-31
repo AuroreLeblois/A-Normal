@@ -1,8 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect x="10" y="10" width="80" height="80" rx="15" fill="#ff6b00"/>
-  <circle cx="30" cy="30" r="7" fill="#fff"/>
-  <circle cx="70" cy="30" r="7" fill="#fff"/>
-  <circle cx="50" cy="50" r="7" fill="#fff"/>
-  <circle cx="30" cy="70" r="7" fill="#fff"/>
-  <circle cx="70" cy="70" r="7" fill="#fff"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 64 64"
+     width="64"
+     height="64">
+
+  <!-- Cercle imparfait -->
+  <path
+    d="M32 10
+       C20 10, 12 18, 12 30
+       C12 42, 22 54, 34 52
+       C46 50, 54 42, 52 30
+       C50 18, 42 10, 32 10 Z"
+    fill="none"
+    stroke="#c46a2b"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+
+  <!-- Fissure interne -->
+  <path
+    d="M28 18
+       L34 26
+       L30 34
+       L36 44"
+    stroke="#c46a2b"
+    stroke-width="3"
+    stroke-linecap="round"
+    fill="none"/>
+
 </svg>
