@@ -30,10 +30,31 @@
       "placeholder": "À venir (à la sortie du livret)"
     },
     {
-      "id": "scenario-1",
-      "title": "Ressources scénario 1",
-      "icon": "📖",
-      "files": [],
+      "id": "PNJ",
+      "title": "PNJ",
+      "icon": "👤",
+      "files": [
+        {
+          "path": "pdf/PNJ-principaux/JohnDe.pdf",
+          "icon": "👨",
+          "label": "John Dé"
+        },
+        {
+          "path": "pdf/PNJ-principaux/Marie.pdf",
+          "icon": "👩",
+          "label": "Marie"
+        },
+        {
+          "path": "pdf/PNJ-principaux/Nova.pdf",
+          "icon": "👾",
+          "label": "Nova"
+        },
+        {
+          "path": "pdf/PNJ-principaux/Old MCDOnald.pdf",
+          "icon": "🍔",
+          "label": "Old MCDOnald"
+        }
+      ],
       "placeholder": "À venir (à la sortie du livret)"
     },
     {
