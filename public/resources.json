@@ -37,18 +37,18 @@
       "placeholder": "À venir (à la sortie du livret)"
     },
     {
-      "id": "Ennemis",
-      "title": "Ennemis",
-      "icon": "👹",
+      "id": "Robots",
+      "title": "Robots",
+      "icon": "🤖",
       "files": [
         {
           "path": "pdf/SU-mobs/PURGE.pdf",
-          "icon": "🧟",
+          "icon": "💀",
           "label": "PURGE"
         },
         {
           "path": "pdf/SU-mobs/Sentinelle SU.pdf",
-          "icon": "🛡️",
+          "icon": "🤖",
           "label": "Sentinelle SU"
         }
       ],
