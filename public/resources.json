@@ -35,6 +35,11 @@
       "icon": "👤",
       "files": [
         {
+          "path": "pdf/PNJ-principaux/Fiche-Dubois-Robin.pdf",
+          "icon": "👨‍💻",
+          "label": "Robin Dubois"
+        },
+        {
           "path": "pdf/PNJ-principaux/JohnDe.pdf",
           "icon": "👨",
           "label": "John Dé"
