@@ -50,6 +50,11 @@
           "path": "pdf/SU-mobs/Sentinelle SU.pdf",
           "icon": "🤖",
           "label": "Sentinelle SU"
+        },
+        {
+          "path": "pdf/SU-mobs/drone.pdf",
+          "icon": "🛸",
+          "label": "Drone"
         }
       ],
       "placeholder": "À venir (à la sortie du livret)"
