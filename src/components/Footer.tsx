@@ -1,7 +1,8 @@
 function Footer() {
+  const currentYear = new Date().getFullYear()
   return (
     <footer>
-      © Aurore Darcissac — 2025 · Tous droits réservés ·
+      © Aurore Darcissac — {currentYear} · Tous droits réservés ·
     </footer>
   )
 }
