@@ -6,12 +6,12 @@
       "icon": "📝",
       "files": [
         {
-          "path": "pdf/Fiche-joueur-vierge.pdf",
+          "path": "pdf/vierges/Fiche-joueur-vierge.pdf",
           "icon": "📄",
           "label": "Fiche personnage vierge"
         },
         {
-          "path": "pdf/Fiche-PNJ-vierge.pdf",
+          "path": "pdf/vierges/Fiche-PNJ-vierge.pdf",
           "icon": "👤",
           "label": "Fiche PNJ vierge"
         },
@@ -34,6 +34,24 @@
       "title": "Ressources scénario 1",
       "icon": "📖",
       "files": [],
+      "placeholder": "À venir (à la sortie du livret)"
+    },
+    {
+      "id": "Ennemis",
+      "title": "Ennemis",
+      "icon": "👹",
+      "files": [
+        {
+          "path": "pdf/SU-mobs/PURGE.pdf",
+          "icon": "🧟",
+          "label": "PURGE"
+        },
+        {
+          "path": "pdf/SU-mobs/Sentinelle SU.pdf",
+          "icon": "🛡️",
+          "label": "Sentinelle SU"
+        }
+      ],
       "placeholder": "À venir (à la sortie du livret)"
     },
     {

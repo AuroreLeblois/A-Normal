@@ -27,8 +27,6 @@ body {
 
 header {
   text-align: center;
-  margin-bottom: 40px;
-  animation: fadeIn 1s ease;
 }
 
 header img {
@@ -56,8 +54,8 @@ h2 {
 /* ---- Boutons ---- */
 .download {
   display: block;
-  margin: 15px auto;
-  padding: 14px 22px;
+  margin: 5px auto;
+  padding: 10px 15px;
   width: fit-content;
   text-decoration: none;
   color: var(--link);
@@ -66,23 +64,25 @@ h2 {
   font-weight: 600;
   transition: all 0.25s ease;
   min-width: 300px;
+  overflow: hidden;
 }
 
 .download:hover {
   background: var(--link);
   color: #000;
-  transform: scale(1.05);
+  border: 2px solid var(--link);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 /* ---- Buy Me a Coffee ---- */
 .buymeacoffee-btn {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 2rem;
   padding: 12px 24px;
   text-decoration: none;
   color: #fff;
-  background: linear-gradient(135deg, #FFDD00 0%, #FFB800 100%);
-  border: 2px solid #FFDD00;
+  background: linear-gradient(135deg, #ffae00 0%, #FFB800 100%);
   border-radius: 25px;
   font-weight: 600;
   font-size: 1em;
@@ -110,8 +110,9 @@ h2 {
   font-size: 1em;
   color: var(--muted);
 }
+
 .lower-section {
-    flex-direction: column
+  flex-direction: column;
 }
 
 /* ---- Container principal ---- */
@@ -139,14 +140,15 @@ h2 {
   text-align: center;
   margin: 20px;
 }
+
 .wrap {
-    display: flex;
-    gap: 1rem;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 5%;
-    width: 100%
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 5%;
+  width: 100%;
 }
 
 footer {
@@ -180,4 +182,3 @@ footer a {
     padding: 10px 20px;
   }
 }
-
