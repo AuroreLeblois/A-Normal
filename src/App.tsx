@@ -3,7 +3,7 @@ import { ResourcesConfig } from './types'
 import Header from './components/Header'
 import ResourceSection from './components/ResourceSection'
 import Footer from './components/Footer'
-import { HoverAnimation, Button, Layout, Text } from 'react-kariu'
+import { HoverAnimation, Button, Layout } from 'react-kariu'
 
 
 function App() {
