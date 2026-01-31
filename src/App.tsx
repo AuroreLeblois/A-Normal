@@ -3,6 +3,7 @@ import { ResourcesConfig } from './types'
 import Header from './components/Header'
 import ResourceSection from './components/ResourceSection'
 import Footer from './components/Footer'
+import CharacterRandomizer from './components/CharacterRandomizer'
 import { HoverAnimation, Button, Layout } from 'react-kariu'
 
 
@@ -51,6 +52,7 @@ function App() {
           </>
         )}
       </main>
+      <CharacterRandomizer />
 
       <section className="section lower-section">
         <Layout >

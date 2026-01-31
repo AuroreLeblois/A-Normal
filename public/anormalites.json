@@ -1,0 +1,203 @@
+{
+  "anormalites": [
+    {
+      "id": "addiction",
+      "nom": "Addiction",
+      "description": "Le personnage a abusé des bonnes choses. Il montre des signes de manque en public. Le personnage doit faire des jets de constitution pour résister aux signes de façon régulière : soit au matin, soit quand le MJ vous le demande en fonction de la gravité de l'addiction. S'il échoue, il risque d'être dénoncé.",
+      "exemple": "cigarette",
+      "retraitPossible": true,
+      "points": "1/3"
+    },
+    {
+      "id": "borgne",
+      "nom": "Borgne",
+      "description": "Le personnage ne voit pas d'un œil. Lors d'un jet de perception, le joueur doit lancer 2 d20 et garder le moins bon score.",
+      "retraitPossible": true,
+      "points": "1"
+    },
+    {
+      "id": "cannibal",
+      "nom": "Cannibal",
+      "description": "Humain qui a mangé quelqu'un et il y a des preuves : vu par une caméra, photos prises par un citoyen ou preuve ADN prouvant le cannibalisme. Doit résister à ses bas instincts et voit dans les gens un repas potentiel.",
+      "retraitPossible": false,
+      "points": "7"
+    },
+    {
+      "id": "collectionneur",
+      "nom": "Collectionneur",
+      "description": "Accumule des objets \"inutiles\" (déchets, os, etc.). Encombrement : -1 à la Dextérité si plus de 2 objets inutiles transportés, -2 si plus de 4 etc… Risque de dénonciation si fouillé.",
+      "retraitPossible": "Oui (thérapie)",
+      "points": "1"
+    },
+    {
+      "id": "dependance",
+      "nom": "Dépendance",
+      "description": "Le personnage est dépendant (cigarette par ex). Il fume ou boit, se drogue devant témoin et se fait dénoncer. Le personnage doit faire des jets de sagesse/constitution pour résister à l'envie. La difficulté est de plus en plus forte à mesure que le joueur résiste.",
+      "retraitPossible": true,
+      "points": "1"
+    },
+    {
+      "id": "dissident",
+      "nom": "Dissident",
+      "description": "Propos anti-SU signalés par un citoyen ou relevés par une caméra du SU.",
+      "retraitPossible": true,
+      "points": "3"
+    },
+    {
+      "id": "hilarite-douloureuse",
+      "nom": "Hilarité douloureuse",
+      "description": "Le personnage rit de tout. Le MJ peut demander au joueur de tirer 1d4 de dommage lorsque le joueur se met à rire pendant la session. Limitée à 1 fois par session.",
+      "retraitPossible": true,
+      "points": "2"
+    },
+    {
+      "id": "inconnu",
+      "nom": "Inconnu",
+      "description": "Ne pas pouvoir être rattaché à une identité et être dénoncé par un citoyen. Ce trait est passager car il suffit de se rendre au centre-ville et de se présenter avec son acte de naissance/preuve d'identité pour régulariser sa situation. Ce trait est possible chez les extraterrestres ou les gens nés dans les camps (enfants d'exilés ou d'anormaux).",
+      "retraitPossible": true,
+      "points": "2"
+    },
+    {
+      "id": "insubordonne",
+      "nom": "Insubordonné/e",
+      "description": "Refuse d'obéir à plusieurs reprises.",
+      "retraitPossible": true,
+      "points": "2"
+    },
+    {
+      "id": "lache",
+      "nom": "Lâche",
+      "description": "Défini par le MJ.",
+      "retraitPossible": "MJ",
+      "points": "0"
+    },
+    {
+      "id": "langage-animaux",
+      "nom": "Langage des animaux",
+      "description": "Humain : avoir 16 de charisme et parler aux animaux devant témoin.",
+      "retraitPossible": false,
+      "points": "2"
+    },
+    {
+      "id": "menteur-compulsif",
+      "nom": "Menteur compulsif",
+      "description": "Ment même sans raison. En dialogue, le MJ peut exiger un jet de Sagesse (difficulté 12) pour dire la \"vérité\".",
+      "retraitPossible": "Oui (thérapie)",
+      "points": "2"
+    },
+    {
+      "id": "odeur-etrange",
+      "nom": "Odeur étrange",
+      "description": "Vous sentez bizarre, pas très bon… Et cela est assez gênant. Donne un malus de -1 à -2 aux jets en fonction de la gravité de l'odeur. Allez donc prendre une douche…",
+      "retraitPossible": "Oui (douche)",
+      "points": "1"
+    },
+    {
+      "id": "pacifiste",
+      "nom": "Pacifiste",
+      "description": "Refuse toute violence, même en légitime défense. Ne peut pas attaquer. Si forcé, jet de Sagesse (difficulté en fonction de la situation) pour ne pas fuir.",
+      "retraitPossible": "Oui (trauma ou MJ)",
+      "points": "0.5"
+    },
+    {
+      "id": "paranoia",
+      "nom": "Paranoïa",
+      "description": "1 fois par session, le joueur doit faire un jet de Sagesse (difficulté 14) pour éviter de prendre une décision irrationnelle (ex. : fuir un allié).",
+      "retraitPossible": "Oui (thérapie longue)",
+      "points": "3"
+    },
+    {
+      "id": "peur-etre-seul",
+      "nom": "Peur d'être seul",
+      "description": "N'aime pas être seul et ne veut jamais être laissé seul. Suivra toujours quelqu'un. Si laissé seul le personnage doit faire un jet de sagesse de difficulté grandissante à mesure que le joueur résiste pour ne pas paniquer.",
+      "retraitPossible": true,
+      "points": "1"
+    },
+    {
+      "id": "phobie",
+      "nom": "Phobie",
+      "description": "Confronté à sa phobie, le joueur doit faire un jet de sagesse pour combattre son envie de crier ou de s'enfuir. La difficulté dépend de la situation et de la gravité de la phobie. La réaction dépend du jet du joueur.",
+      "note": "À préciser lors de la création",
+      "retraitPossible": true,
+      "points": "2"
+    },
+    {
+      "id": "roux",
+      "nom": "Roux",
+      "description": "Humain : dénoncé par un citoyen. Peut être choisi avant le démarrage mais ne donne pas de point avant le scénario 1.",
+      "retraitPossible": true,
+      "points": "0.5"
+    },
+    {
+      "id": "sans-pitie",
+      "nom": "Sans pitié",
+      "description": "Exécution publique réalisée par le personnage : 0 si exilé, 1 si citoyen. Ne peut être choisi à la création.",
+      "retraitPossible": false,
+      "points": "0/1"
+    },
+    {
+      "id": "solitaire-agoraphobe",
+      "nom": "Solitaire / Agoraphobe",
+      "description": "N'aime pas les gens et fuit les interactions. Si trop entouré, le joueur doit faire un jet d'intelligence/sagesse d'une difficulté 12 pour résister à la panique. Lors d'interactions, le MJ peut demander à relancer un jet.",
+      "retraitPossible": true,
+      "points": "1/2"
+    },
+    {
+      "id": "sourd",
+      "nom": "Sourd",
+      "description": "Le personnage n'entend pas bien et cela l'handicape dans ses interactions. Lors des dialogues, le personnage doit réaliser un jet au choix pour savoir s'il entend la conversation partiellement, complètement ou pas du tout.",
+      "note": "D'une oreille et/ou les 2",
+      "retraitPossible": true,
+      "points": "1"
+    },
+    {
+      "id": "tache-naissance",
+      "nom": "Tâche de naissance",
+      "description": "A une tache de naissance visible. Peut être choisi avant le démarrage mais ne donne pas de point.",
+      "retraitPossible": true,
+      "points": "1"
+    },
+    {
+      "id": "timide",
+      "nom": "Timide",
+      "description": "Lors d'un dialogue, le personnage a un désavantage dans ses jets de charisme. Il faut lancer 2 d20 et garder le moins bon score.",
+      "retraitPossible": true,
+      "points": "1/3"
+    },
+    {
+      "id": "tricheur",
+      "nom": "Tricheur",
+      "description": "Triche repérée (histoire perso/par MJ/signalée par un citoyen).",
+      "retraitPossible": true,
+      "points": "2"
+    },
+    {
+      "id": "violent",
+      "nom": "Violent",
+      "description": "Signalement par citoyen, témoin, victime ou caméra du SU d'une attaque.",
+      "retraitPossible": true,
+      "points": "3"
+    },
+    {
+      "id": "vulgaire",
+      "nom": "Vulgaire",
+      "description": "Personnage impoli. Lorsqu'il parle à un PNJ, le MJ peut demander un jet de sagesse pour savoir si le joueur sera mal perçu. En cas d'échec, le joueur devra ajouter des injures et autres grossièretés à ses propos.",
+      "retraitPossible": true,
+      "points": "2"
+    },
+    {
+      "id": "yeux-vairons",
+      "nom": "Yeux vairons",
+      "description": "Dénoncé par un citoyen. Ne peut être choisi avant le scénario 1. Mais peut être dans la description de votre personnage.",
+      "retraitPossible": true,
+      "points": "0.5"
+    },
+    {
+      "id": "verite-forcee",
+      "nom": "Vérité Forcée",
+      "description": "Le joueur ne peut pas consciemment mentir. Un jet de sagesse/charisme est nécessaire pour tenter de dissimuler la vérité d'une difficulté variable selon la situation.",
+      "retraitPossible": true,
+      "points": "1"
+    }
+  ]
+}
