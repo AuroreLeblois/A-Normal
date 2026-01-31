@@ -23,7 +23,7 @@ function CharacterRandomizer() {
   const [anormalites, setAnormalites] = useState<Anormalite[]>([])
 
   useEffect(() => {
-    fetch('./anormalites.json')
+    fetch(`${import.meta.env.BASE_URL}anormalites.json`)
       .then(res => res.json())
       .then(data => setAnormalites(data.anormalites))
       .catch(err => console.error('Erreur chargement anormalités:', err))
