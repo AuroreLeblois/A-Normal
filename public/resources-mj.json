@@ -6,11 +6,6 @@
       "icon": "📝",
       "files": [
         {
-          "path": "pdf/vierges/Fiche-joueur-vierge.pdf",
-          "icon": "📄",
-          "label": "Fiche personnage vierge"
-        },
-        {
           "path": "pdf/vierges/Fiche-PNJ-vierge.pdf",
           "icon": "👤",
           "label": "Fiche PNJ vierge"
@@ -23,20 +18,13 @@
       ]
     },
     {
-      "id": "joueurs",
-      "title": "Pour les joueurs",
-      "icon": "🎲",
-      "files": [],
-      "placeholder": "À venir (à la sortie du livret)"
-    },
-    {
-      "id": "PNJ",
-      "title": "PNJ",
+      "id": "PNJ-humains",
+      "title": "PNJ humains",
       "icon": "👤",
       "files": [
         {
           "path": "pdf/PNJ-principaux/Fiche-Dubois-Robin.pdf",
-          "icon": "👨‍💻",
+          "icon": "👼",
           "label": "Robin Dubois"
         },
         {
@@ -50,14 +38,32 @@
           "label": "Marie"
         },
         {
+          "path": "pdf/PNJ-principaux/Old MCDOnald.pdf",
+          "icon": "🌾",
+          "label": "Old MCDonald"
+        },
+        {
+          "path": "pdf/PNJ-principaux/Coordinateur.pdf",
+          "icon": "🙏💻​",
+          "label": "Coordinateur"
+        }
+      ],
+      "placeholder": "À venir (à la sortie du livret)"
+    },
+    {
+      "id": "PNJ-aliens",
+      "title": "PNJ aliens",
+      "icon": "👽",
+      "files": [
+        {
           "path": "pdf/PNJ-principaux/Nova.pdf",
           "icon": "👾",
           "label": "Nova"
         },
         {
-          "path": "pdf/PNJ-principaux/Old MCDOnald.pdf",
-          "icon": "🍔",
-          "label": "Old MCDOnald"
+          "path": "pdf/PNJ-principaux/Coordinateur-reel.pdf",
+          "icon": "🙏🦗",
+          "label": "Coordinateur"
         }
       ],
       "placeholder": "À venir (à la sortie du livret)"
@@ -83,13 +89,6 @@
           "label": "Drone"
         }
       ],
-      "placeholder": "À venir (à la sortie du livret)"
-    },
-    {
-      "id": "plans",
-      "title": "Plans",
-      "icon": "🗺️",
-      "files": [],
       "placeholder": "À venir (à la sortie du livret)"
     }
   ]

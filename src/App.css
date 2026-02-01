@@ -37,18 +37,46 @@ header img {
   animation: spin 3s linear infinite;
 }
 
-h1 {
-  font-size: 2.2em;
-  color: var(--accent);
-  letter-spacing: 2px;
-  margin-bottom: 8px;
-}
+
 
 h2 {
   color: var(--accent);
   font-size: 1.1em;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-weight: 400;
+}
+
+/* ---- Navigation ---- */
+.main-nav {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--muted);
+  border: 2px solid transparent;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.95em;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-link:hover {
+  color: var(--text);
+  background: rgba(255, 179, 0, 0.1);
+  border-color: rgba(255, 179, 0, 0.3);
+}
+
+.nav-link.active {
+  color: var(--accent);
+  background: rgba(255, 179, 0, 0.15);
+  border-color: var(--accent);
 }
 
 /* ---- Boutons ---- */
@@ -103,7 +131,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 600px;
+  max-width: 100%;
   margin: 30px auto;
   text-align: center;
   line-height: 1.6em;
@@ -342,7 +370,7 @@ footer a {
 }
 
 /* ---- Responsive ---- */
-@media (max-width: 600px) {
+@media (max-width: 950px) {
   h1 { font-size: 1.8em; }
   .download { width: 80%; }
   .buymeacoffee-btn {

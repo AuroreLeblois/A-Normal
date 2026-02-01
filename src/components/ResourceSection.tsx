@@ -1,5 +1,5 @@
 import { Section, ResourceFile } from '../types'
-import { HoverAnimation } from 'react-kariu'
+import { HoverAnimation, Title } from 'react-kariu'
 
 interface Props {
   section: Section
@@ -30,7 +30,7 @@ function DownloadLink({ file }: { file: ResourceFile }) {
 function ResourceSection({ section }: Props) {
   return (
     <section id={section.id}>
-      <h2>{section.icon} {section.title}</h2>
+      <Title priority={4} text={section.icon + " " + section.title} align="left"/>
       
       {section.files.length > 0 ? (
         section.files.map((file, index) => (
