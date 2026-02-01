@@ -31,6 +31,7 @@ function ResourceSection({ section }: Props) {
   return (
     <section id={section.id}>
       <SlideAnimation direction={section.direction} duration={1000} delay={800} trigger={true}>
+        <div className="resource-section-container" style={{padding: "1rem"}}>
         <Title priority={4} text={section.icon + " " + section.title} align="left"/>
       
       {section.files.length > 0 ? (
@@ -40,7 +41,9 @@ function ResourceSection({ section }: Props) {
       ) : section.placeholder ? (
         <div className="placeholder">{section.placeholder}</div>
       ) : null}
+      </div>
        </SlideAnimation>
+       
     </section>
   )
 }

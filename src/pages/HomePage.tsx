@@ -38,11 +38,11 @@ function HomePage() {
             {/* Groupe les sections par 2 */}
             <Layout flexDirection="row" flexWrap="wrap" gap={"2rem"} alignItems="start">
             {Array.from({ length: Math.ceil(config.sections.length / 2) }, (_, i) => (
-              <>
+              <div key={i.toString()}>
                 {config.sections.slice(i * 2, i * 2 + 2).map(section => (
-                  <ResourceSection key={section.id} section={section} />
+                  <ResourceSection key={section.id+i.toString()} section={section} />
                 ))}
-                </>
+                </div>
             ))}
             </Layout>
           </>
