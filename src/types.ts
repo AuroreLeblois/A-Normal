@@ -7,6 +7,8 @@ export interface ResourceFile {
 export interface Section {
   id: string
   title: string
+  direction?: "left" | "right" | "top" | "bottom"
+  delay?: number
   icon: string
   files: ResourceFile[]
   placeholder?: string

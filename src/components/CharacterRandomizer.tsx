@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { HoverAnimation } from 'react-kariu'
+import { HoverAnimation, Title } from 'react-kariu'
 
 interface Anormalite {
   id: string
@@ -64,10 +64,10 @@ function CharacterRandomizer() {
 
   return (
     <div className="randomizer-container">
-      <h3 className="randomizer-title">🎲 Randomiseur de PJ</h3>
+      <Title priority={4} text="🎲 Aide au tirage de personnage" align="center"/>
       
       <div className="randomizer-buttons">
-        <HoverAnimation duration={200} intensity={1.05} type="scale" className="randomizer-btn-container">
+        <HoverAnimation duration={200} intensity={0.55} type="scale" className="randomizer-btn-container">
           <button 
             className={`randomizer-btn ${isRolling ? 'rolling' : ''}`}
             onClick={rollCharacter}
@@ -78,7 +78,7 @@ function CharacterRandomizer() {
         </HoverAnimation>
         
         {result && !isRolling && (
-          <HoverAnimation duration={200} intensity={1.05} type="scale">
+          <HoverAnimation duration={200} intensity={0.55} type="scale">
             <button 
               className="randomizer-btn clear-btn"
               onClick={() => setResult(null)}

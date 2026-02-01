@@ -1,0 +1,103 @@
+{
+  "sections": [
+    {
+      "id": "fiches-vierges",
+      "title": "Fiches vierges",
+      "icon": "📝",
+      "direction": "left",
+      "delay": 200,
+      "files": [
+        {
+          "path": "pdf/vierges/Fiche-PNJ-vierge.pdf",
+          "icon": "👤",
+          "label": "Fiche PNJ vierge"
+        },
+        {
+          "path": "pdf/vierges/PJ-renommée.pdf",
+          "icon": "📊",
+          "label": "Renommée des joueurs"
+        }
+      ]
+    },
+    {
+      "id": "PNJ-humains",
+      "title": "PNJ humains",
+      "icon": "👤",
+      "direction": "top",
+      "delay": 400,
+      "files": [
+        {
+          "path": "pdf/PNJ-principaux/Fiche-Dubois-Robin.pdf",
+          "icon": "👼",
+          "label": "Robin Dubois"
+        },
+        {
+          "path": "pdf/PNJ-principaux/JohnDe.pdf",
+          "icon": "👨",
+          "label": "John Dé"
+        },
+        {
+          "path": "pdf/PNJ-principaux/Marie.pdf",
+          "icon": "👩",
+          "label": "Marie"
+        },
+        {
+          "path": "pdf/PNJ-principaux/Old MCDOnald.pdf",
+          "icon": "🌾",
+          "label": "Old MCDonald"
+        },
+        {
+          "path": "pdf/PNJ-principaux/Coordinateur.pdf",
+          "icon": "🙏💻​",
+          "label": "Coordinateur"
+        }
+      ],
+      "placeholder": "À venir (à la sortie du livret)"
+    },
+    {
+      "id": "PNJ-aliens",
+      "title": "PNJ aliens",
+      "icon": "👽",
+      "direction": "right",
+      "delay": 600,
+      "files": [
+        {
+          "path": "pdf/PNJ-principaux/Nova.pdf",
+          "icon": "👾",
+          "label": "Nova"
+        },
+        {
+          "path": "pdf/PNJ-principaux/Coordinateur-reel.pdf",
+          "icon": "🙏🦗",
+          "label": "Coordinateur"
+        }
+      ],
+      "placeholder": "À venir (à la sortie du livret)"
+    },
+    {
+      "id": "Robots",
+      "title": "Robots",
+      "icon": "🤖",
+      "direction": "bottom",  
+      "delay": 800,
+      "files": [
+        {
+          "path": "pdf/SU-mobs/PURGE.pdf",
+          "icon": "💀",
+          "label": "PURGE"
+        },
+        {
+          "path": "pdf/SU-mobs/Sentinelle SU.pdf",
+          "icon": "🤖",
+          "label": "Sentinelle SU"
+        },
+        {
+          "path": "pdf/SU-mobs/drone.pdf",
+          "icon": "🛸",
+          "label": "Drone"
+        }
+      ],
+      "placeholder": "À venir (à la sortie du livret)"
+    }
+  ]
+}

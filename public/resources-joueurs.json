@@ -1,0 +1,39 @@
+{
+  "sections": [
+    {
+      "id": "joueurs",
+      "title": "Pour les joueurs",
+      "icon": "🎲",
+      "direction": "left",
+      "delay": 100,
+      "files": [
+        {
+          "path": "pdf/vierges/Fiche-joueur-vierge.pdf",
+          "icon": "📄",
+          "label": "Fiche personnage vierge"
+        }
+      ],
+      "placeholder": "À venir (à la sortie du livret)"
+    },
+    {
+      "id": "plans",
+      "title": "Plans",
+      "icon": "🗺️",
+      "direction": "right",
+      "delay": 300,
+      "files": [
+        {
+          "path": "pdf/Plans/Vile_de_départ.png",
+          "icon": "📍​",
+          "label": "Ville de départ"
+        },
+        {
+          "path": "pdf/Plans/Plan_place_Publique.png",
+          "icon": "🏙️",
+          "label": "Place publique"
+        }
+      ],
+      "placeholder": "À venir (à la sortie du livret)"
+    }
+  ]
+}
