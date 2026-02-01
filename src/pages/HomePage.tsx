@@ -1,13 +1,18 @@
 import { useEffect, useState } from 'react'
 import { ResourcesConfig } from '../types'
 import ResourceSection from '../components/ResourceSection'
-import { Layout } from 'react-kariu'
+import { Layout, SlideAnimation } from 'react-kariu'
 
 function HomePage() {
   const [config, setConfig] = useState<ResourcesConfig | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [isMJConfirmed, setIsMJConfirmed] = useState<boolean>(() => {
+    return sessionStorage.getItem('mj-confirmed') === 'true'
+  });
 
   useEffect(() => {
+    if (!isMJConfirmed) return;
+    
     fetch(`${import.meta.env.BASE_URL}resources-mj.json`)
       .then(res => {
         if (!res.ok) throw new Error(`Erreur: ${res.status}`)
@@ -18,7 +23,41 @@ function HomePage() {
       .finally(() => {
         sessionStorage.setItem('page', 'home')
       })
-  }, [])
+  }, [isMJConfirmed])
+
+  const handleConfirmMJ = () => {
+    sessionStorage.setItem('mj-confirmed', 'true');
+    setIsMJConfirmed(true);
+  };
+
+  // Écran de confirmation MJ
+  if (!isMJConfirmed) {
+    return (
+      <div className="mj-gate">
+          <div className="mj-gate-content">
+            <div className="mj-gate-icon">🎭</div>
+            <h2 className="mj-gate-title">Espace Meneur de Jeu</h2>
+            <div className="mj-gate-warning">
+              <span className="warning-icon">⚠️</span>
+              <p>
+                <strong>Attention !</strong> Cette section contient des <strong>spoilers</strong> destinés uniquement au Meneur de Jeu.
+              </p>
+              <p>
+                Si vous êtes un <strong>joueur</strong>, veuillez retourner à l'espace Joueurs pour préserver votre expérience de jeu.
+              </p>
+            </div>
+            <div className="mj-gate-buttons">
+              <button className="mj-confirm-btn" onClick={handleConfirmMJ}>
+                🎲 Je suis le MJ, accéder au contenu
+              </button>
+              <a href="#/joueurs" className="mj-back-btn">
+                👥 Je suis un joueur, retourner
+              </a>
+            </div>
+          </div>
+      </div>
+    );
+  }
 
   return (
     <>

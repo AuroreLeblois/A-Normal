@@ -369,6 +369,106 @@ footer a {
   75% { transform: translateX(3px) rotate(1deg); }
 }
 
+/* ---- MJ Gate (Confirmation) ---- */
+.mj-gate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  padding: 20px;
+}
+
+.mj-gate-content {
+  background: linear-gradient(145deg, #1a1a1a 0%, #252525 100%);
+  border: 2px solid var(--accent);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(255, 179, 0, 0.2);
+}
+
+.mj-gate-icon {
+  font-size: 4em;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 0 12px rgba(255, 179, 0, 0.5));
+}
+
+.mj-gate-title {
+  color: var(--accent);
+  font-size: 1.8em;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.mj-gate-warning {
+  background: rgba(255, 82, 82, 0.1);
+  border: 1px solid rgba(255, 82, 82, 0.4);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 28px;
+}
+
+.mj-gate-warning .warning-icon {
+  font-size: 2em;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.mj-gate-warning p {
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.mj-gate-warning p:last-child {
+  margin-bottom: 0;
+}
+
+.mj-gate-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mj-confirm-btn {
+  background: linear-gradient(135deg, #ffb300 0%, #ff9500 100%);
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 24px;
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 179, 0, 0.3);
+}
+
+.mj-confirm-btn:hover {
+  background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 179, 0, 0.4);
+}
+
+.mj-back-btn {
+  display: inline-block;
+  padding: 14px 24px;
+  text-decoration: none;
+  color: var(--muted);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.mj-back-btn:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 950px) {
   h1 { font-size: 1.8em; }
@@ -384,5 +484,15 @@ footer a {
   .randomizer-btn {
     padding: 12px 20px;
     font-size: 1em;
+  }
+  .mj-gate-content {
+    padding: 24px;
+    margin: 10px;
+  }
+  .mj-gate-icon {
+    font-size: 3em;
+  }
+  .mj-gate-title {
+    font-size: 1.4em;
   }
 }
