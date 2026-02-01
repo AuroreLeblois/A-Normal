@@ -1,12 +1,30 @@
-import { defineConfig } from 'vite'
+import { defineConfig, Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
+
+// Plugin pour charger le CSS de manière asynchrone (non-bloquant)
+function asyncCssPlugin(): Plugin {
+  return {
+    name: 'async-css',
+    transformIndexHtml(html) {
+      // Remplace <link rel="stylesheet"> par un chargement asynchrone
+      return html.replace(
+        /<link rel="stylesheet" crossorigin href="([^"]+)">/g,
+        `<link rel="preload" href="$1" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="$1"></noscript>`
+      )
+    }
+  }
+}
 
 export default defineConfig(({ command }) => ({
   plugins: [
     react(),
+    asyncCssPlugin(),
     VitePWA({
       registerType: 'autoUpdate',
+      // Différer l'inscription du SW pour ne pas bloquer le rendu
+      injectRegister: 'script-defer',
       workbox: {
         // Assets JS/CSS avec hash - cache longue durée (1 an)
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2}'],
@@ -100,6 +118,12 @@ export default defineConfig(({ command }) => ({
       }
     },
     target: 'es2020',
-    cssCodeSplit: true
+    cssCodeSplit: true,
+    // Inliner les petits fichiers pour réduire les requêtes
+    assetsInlineLimit: 4096,
+    // Désactiver le polyfill modulepreload (supporté par les navigateurs modernes)
+    modulePreload: {
+      polyfill: false
+    }
   }
 }))

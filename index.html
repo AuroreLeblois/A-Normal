@@ -6,7 +6,16 @@
   <title>A/Normal — Ressources officielles</title>
   <meta name="description" content="Ressources officielles du jeu de rôle A/Normal — par Aurore Darcissac. Téléchargez ici les fiches vierges et supports de jeu.">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="shortcut icon" href="/favicon.svg">
+  <!-- CSS critique inliné pour éviter le blocage du rendu -->
+  <style>
+    :root{--accent:#ffb300;--bg:#0c0c0c;--text:#f5f5f5;--muted:#b3b3b3}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:"Segoe UI",Roboto,Arial,sans-serif;background:linear-gradient(180deg,#0c0c0c 0%,#1a1a1a 100%);color:var(--text);display:flex;flex-direction:column;align-items:center;min-height:100vh;padding:40px 20px}
+    header{text-align:center}
+    h2{color:var(--accent);font-size:1.1em;margin-bottom:20px;font-weight:400}
+    .loading{color:var(--muted);padding:40px;text-align:center}
+    #root{width:100%}
+  </style>
 </head>
 <body>
   <div id="root"></div>
