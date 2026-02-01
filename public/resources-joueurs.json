@@ -4,6 +4,8 @@
       "id": "joueurs",
       "title": "Pour les joueurs",
       "icon": "🎲",
+      "direction": "left",
+      "delay": 100,
       "files": [
         {
           "path": "pdf/vierges/Fiche-joueur-vierge.pdf",
@@ -17,6 +19,8 @@
       "id": "plans",
       "title": "Plans",
       "icon": "🗺️",
+      "direction": "right",
+      "delay": 300,
       "files": [
         {
           "path": "pdf/Plans/Vile_de_départ.png",
