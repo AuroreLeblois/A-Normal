@@ -2,6 +2,7 @@
 import diceSvg from '/dice.svg'
 import { SlideAnimation, Title } from 'react-kariu'
 import { Link, useLocation } from 'react-router-dom'
+// HashRouter: les chemins sont sous forme /#/path
 
 function Header() {
   const location = useLocation()

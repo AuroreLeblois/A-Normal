@@ -1,19 +1,24 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { lazy, Suspense } from 'react'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import HomePage from './pages/HomePage'
-import PlayersPage from './pages/PlayersPage'
+
+// Lazy loading des pages pour réduire le bundle initial
+const HomePage = lazy(() => import('./pages/HomePage'))
+const PlayersPage = lazy(() => import('./pages/PlayersPage'))
 
 function App() {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <HashRouter>
       <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/joueurs" element={<PlayersPage />} />
-      </Routes>
+      <Suspense fallback={<div className="loading">Chargement...</div>}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/joueurs" element={<PlayersPage />} />
+        </Routes>
+      </Suspense>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

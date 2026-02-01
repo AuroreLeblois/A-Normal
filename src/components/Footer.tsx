@@ -1,6 +1,5 @@
-import { Layout } from "react-kariu"
-import { HoverAnimation } from "react-kariu"
-import { Button } from "react-kariu"
+import { Layout, HoverAnimation, Button } from "react-kariu"
+
 function Footer() {
   const currentYear = new Date().getFullYear()
   return (
@@ -12,7 +11,6 @@ function Footer() {
             Ces documents sont offerts avec l'achat du livret officiel.<br />
             Merci de soutenir le travail d'auteurs indépendants 💛
           </p>
-          <></>
           <HoverAnimation
             duration={300}
             intensity={1}
