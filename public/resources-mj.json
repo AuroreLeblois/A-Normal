@@ -4,6 +4,8 @@
       "id": "fiches-vierges",
       "title": "Fiches vierges",
       "icon": "📝",
+      "direction": "left",
+      "delay": 200,
       "files": [
         {
           "path": "pdf/vierges/Fiche-PNJ-vierge.pdf",
@@ -21,6 +23,8 @@
       "id": "PNJ-humains",
       "title": "PNJ humains",
       "icon": "👤",
+      "direction": "top",
+      "delay": 400,
       "files": [
         {
           "path": "pdf/PNJ-principaux/Fiche-Dubois-Robin.pdf",
@@ -54,6 +58,8 @@
       "id": "PNJ-aliens",
       "title": "PNJ aliens",
       "icon": "👽",
+      "direction": "right",
+      "delay": 600,
       "files": [
         {
           "path": "pdf/PNJ-principaux/Nova.pdf",
@@ -72,6 +78,8 @@
       "id": "Robots",
       "title": "Robots",
       "icon": "🤖",
+      "direction": "bottom",  
+      "delay": 800,
       "files": [
         {
           "path": "pdf/SU-mobs/PURGE.pdf",
