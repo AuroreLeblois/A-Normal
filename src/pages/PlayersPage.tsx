@@ -16,6 +16,9 @@ function PlayersPage() {
       })
       .then(setConfig)
       .catch(err => setError(err.message))
+      .finally(() => {
+        sessionStorage.setItem('page', 'players')
+      })
   }, [])
 
   return (

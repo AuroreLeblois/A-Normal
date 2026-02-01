@@ -1,5 +1,5 @@
 import { Section, ResourceFile } from '../types'
-import { HoverAnimation, SlideAnimation, Title } from 'react-kariu'
+import { HoverAnimation, Title } from 'react-kariu'
 
 interface Props {
   section: Section
@@ -30,7 +30,6 @@ function DownloadLink({ file }: { file: ResourceFile }) {
 function ResourceSection({ section }: Props) {
   return (
     <section id={section.id}>
-      <SlideAnimation direction={section.direction} duration={1000} delay={800} trigger={true}>
         <div className="resource-section-container" style={{padding: "1rem"}}>
         <Title priority={4} text={section.icon + " " + section.title} align="left"/>
       
@@ -42,8 +41,6 @@ function ResourceSection({ section }: Props) {
         <div className="placeholder">{section.placeholder}</div>
       ) : null}
       </div>
-       </SlideAnimation>
-       
     </section>
   )
 }

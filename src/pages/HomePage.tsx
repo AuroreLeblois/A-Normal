@@ -15,6 +15,9 @@ function HomePage() {
       })
       .then(setConfig)
       .catch(err => setError(err.message))
+      .finally(() => {
+        sessionStorage.setItem('page', 'home')
+      })
   }, [])
 
   return (
