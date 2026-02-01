@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { ResourcesConfig } from '../types'
 import ResourceSection from '../components/ResourceSection'
-import { Layout, SlideAnimation } from 'react-kariu'
+import { Layout } from 'react-kariu'
 
 function HomePage() {
   const [config, setConfig] = useState<ResourcesConfig | null>(null);
