@@ -20,7 +20,7 @@ function DownloadLink({ file }: { file: ResourceFile }) {
     intensity={1}
     type="scale"
   >
-    <a className="download" href={file.path} download>
+    <a className="download" href={file.path} target="_blank">
       {file.icon} {label}
     </a>
     </HoverAnimation>
