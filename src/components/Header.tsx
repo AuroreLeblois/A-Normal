@@ -11,7 +11,7 @@ function Header() {
     <header>
       <SlideAnimation direction="top" duration={500} delay={100} trigger={true}>
         <Link to="/">
-          <img src={diceSvg} alt="Icône A/Normal" />
+          <img src={diceSvg} alt="Icône de dé" />
         </Link>
       </SlideAnimation>
       <SlideAnimation direction="top" duration={500} delay={300} trigger={true}>
