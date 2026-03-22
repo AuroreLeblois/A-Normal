@@ -37,6 +37,27 @@ header img {
   animation: spin 3s linear infinite;
 }
 
+header .nav-link {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  max-width: 200px;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.25rem;
+  align-items: center;
+  justify-content: center;
+}
+
+header .favicon {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 0;
+  filter: none;
+  animation: none !important;
+}
+
 
 
 h2 {
@@ -442,6 +463,7 @@ footer a {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(255, 179, 0, 0.3);
+  text-decoration: none;
 }
 
 .mj-confirm-btn:hover {

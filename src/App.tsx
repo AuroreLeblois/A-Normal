@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react'
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
@@ -10,7 +10,7 @@ const PlayersPage = lazy(() => import('./pages/PlayersPage'))
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Header />
       <Suspense fallback={<div className="loading">Chargement...</div>}>
         <Routes>
@@ -20,7 +20,7 @@ function App() {
         </Routes>
       </Suspense>
       <Footer />
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 

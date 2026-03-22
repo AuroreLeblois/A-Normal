@@ -2,6 +2,7 @@
 import diceSvg from '/dice.svg'
 import { SlideAnimation, Title } from 'react-kariu'
 import { Link, useLocation } from 'react-router-dom'
+import favicon from '/favicon.svg'
 // HashRouter: les chemins sont sous forme /#/path
 
 function Header() {
@@ -22,6 +23,9 @@ function Header() {
       </SlideAnimation>
       <SlideAnimation direction="top" duration={500} delay={800} trigger={true}>
         <nav className="main-nav">
+        <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>
+          <img className="favicon" src={favicon} alt="Icône de dé" /> Accueil
+          </Link>
           <Link to="/meneur" className={`nav-link ${location.pathname === '/meneur' ? 'active' : ''}`}>
             🎭 Meneur de Jeu
           </Link>

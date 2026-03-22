@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { ResourcesConfig } from '../types'
 import ResourceSection from '../components/ResourceSection'
 import { Layout } from 'react-kariu'
@@ -50,9 +51,9 @@ function MJPage() {
               <button className="mj-confirm-btn" onClick={handleConfirmMJ}>
                 🎲 Je suis le MJ, accéder au contenu
               </button>
-              <a href="#/joueurs" className="mj-back-btn">
+              <Link to="/joueurs" className="mj-back-btn">
                 👥 Je suis un joueur, retourner
-              </a>
+              </Link>
             </div>
           </div>
       </div>
@@ -74,9 +75,9 @@ function MJPage() {
         </p>
       </section>
       <section className="section">
-        <a href="#/joueurs" className="mj-back-btn">
+        <Link to="/joueurs" className="mj-back-btn">
               👥 Je suis un joueur, aller à l'espace Joueurs
-          </a>
+          </Link>
         </section>
       <main id="resources-container">
         {error && (
