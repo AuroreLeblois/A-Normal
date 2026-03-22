@@ -70,6 +70,11 @@
           "path": "pdf/Scénario2/Coordinateur.pdf",
           "icon": "🙏🦗",
           "label": "Coordinateur"
+        },
+        {
+          "path": "pdf/Scénarios-variables/Ziggy.pdf",
+          "icon": "🦎",
+          "label": "Ziggy"
         }
       ],
       "placeholder": "À venir (à la sortie du livret)"

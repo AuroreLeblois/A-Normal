@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 
 // Lazy loading des pages pour réduire le bundle initial
 const HomePage = lazy(() => import('./pages/HomePage'))
+const MJPage = lazy(() => import('./pages/MJPage'))
 const PlayersPage = lazy(() => import('./pages/PlayersPage'))
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Suspense fallback={<div className="loading">Chargement...</div>}>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/meneur" element={<MJPage />} />
           <Route path="/joueurs" element={<PlayersPage />} />
         </Routes>
       </Suspense>

@@ -22,7 +22,7 @@ function Header() {
       </SlideAnimation>
       <SlideAnimation direction="top" duration={500} delay={800} trigger={true}>
         <nav className="main-nav">
-          <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>
+          <Link to="/meneur" className={`nav-link ${location.pathname === '/meneur' ? 'active' : ''}`}>
             🎭 Meneur de Jeu
           </Link>
           <Link to="/joueurs" className={`nav-link ${location.pathname === '/joueurs' ? 'active' : ''}`}>
