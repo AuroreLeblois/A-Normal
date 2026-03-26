@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { SlideAnimation, Title, HoverAnimation } from 'react-kariu'
+import { SlideAnimation, Title } from 'react-kariu'
 
 interface Props {
   onConfirm: () => void
@@ -25,16 +25,12 @@ function MJGate({ onConfirm }: Props) {
             </p>
           </div>
           <div className="mj-gate-buttons">
-            <HoverAnimation duration={250} intensity={1} type="scale">
-              <button className="mj-confirm-btn" onClick={onConfirm}>
-                🎲 Je suis le MJ — accéder au contenu
-              </button>
-            </HoverAnimation>
-            <HoverAnimation duration={250} intensity={1} type="scale">
+            <button className="mj-confirm-btn" onClick={onConfirm}>
+              🎲 Je suis le MJ — accéder au contenu
+            </button>
             <Link to="/joueurs" className="mj-back-btn">
-              👥 Je suis un joueur
+              👥 Je suis un joueur, retourner
             </Link>
-            </HoverAnimation>
           </div>
         </div>
       </SlideAnimation>

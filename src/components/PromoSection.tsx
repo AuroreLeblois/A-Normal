@@ -1,4 +1,4 @@
-import { SlideAnimation, Button, HoverAnimation } from 'react-kariu'
+import { SlideAnimation, Button } from 'react-kariu'
 
 function PromoSection() {
   return (
@@ -18,21 +18,17 @@ function PromoSection() {
               mécaniques avancées pour les Meneurs de Jeu les plus exigeants.
             </p>
             <div className="promo-actions">
-              <HoverAnimation duration={250} intensity={1} type="scale">
-                <Button
-                  label="Commander le Livre"
-                  primary
-                  className="btn-primary"
-                  onClick={() => {}}
-                />
-              </HoverAnimation>
-              <HoverAnimation duration={250} intensity={1} type="scale">
-                <Button
-                  label="Consulter un Extrait"
-                  className="btn-outline"
-                  onClick={() => {}}
-                />
-              </HoverAnimation>
+              <Button
+                label="Commander le Livre"
+                primary
+                className="btn-primary"
+                onClick={() => {}}
+              />
+              <Button
+                label="Consulter un Extrait"
+                className="btn-outline"
+                onClick={() => {}}
+              />
             </div>
           </div>
 

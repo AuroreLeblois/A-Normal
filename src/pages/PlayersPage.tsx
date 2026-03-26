@@ -3,7 +3,7 @@ import CharacterRandomizer from '../components/CharacterRandomizer'
 import PageHeader from '../components/PageHeader'
 import ErrorBanner from '../components/ErrorBanner'
 import { BentoMainCard, BentoSideCard } from '../components/BentoCards'
-import { SlideAnimation, Button, HoverAnimation } from 'react-kariu'
+import { SlideAnimation, Button } from 'react-kariu'
 import { useFetchJson } from '../hooks/useFetchJson'
 
 function PlayersPage() {
@@ -42,6 +42,7 @@ function PlayersPage() {
             <div className="bento-full">
               <div className="bento-card-half">
                 <div className="bento-card-half-inner">
+                  <div className="bento-card-half-icon">🎲</div>
                   <div style={{ flex: 1 }}>
                     <h4 className="bento-card-half-title">Générateur de personnage</h4>
                     <p className="bento-card-half-desc">
@@ -64,14 +65,12 @@ function PlayersPage() {
                   </p>
                 </div>
               </div>
-              <HoverAnimation duration={250} intensity={0.8} type="scale">
-                <Button
-                  label="Rejoindre le Discord"
-                  className="btn-outline"
-                  onClick={() => {}}
-                  sx={{ fontSize: '0.75rem', padding: '0.6rem 1.25rem' }}
-                />
-              </HoverAnimation>
+              <Button
+                label="Rejoindre le Discord"
+                className="btn-outline"
+                onClick={() => {}}
+                sx={{ fontSize: '0.75rem', padding: '0.6rem 1.25rem' }}
+              />
             </div>
 
           </div>

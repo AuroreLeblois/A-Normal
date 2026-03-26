@@ -216,7 +216,6 @@ h1, h2, h3, h4, h5 { font-weight: inherit; margin: 0; }
   display: flex;
   align-items: center;
   padding: 5rem 2rem 5rem 6%;
-  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -252,13 +251,12 @@ h1, h2, h3, h4, h5 { font-weight: inherit; margin: 0; }
 }
 
 .hero-title {
+  margin-top: 0.5rem;
   font-family: var(--f-headline) !important;
-  font-size: clamp(4rem, 9vw, 7.5rem) !important;
+  font-size: clamp(4rem, 9vw, 6rem) !important;
   font-weight: 700 !important;
   font-style: italic !important;
   color: var(--primary) !important;
-  line-height: 1.0 !important;
-  margin-bottom: 0.1rem !important;
 }
 
 .hero-title-sub {
@@ -336,6 +334,7 @@ h1, h2, h3, h4, h5 { font-weight: inherit; margin: 0; }
   background: rgba(42, 42, 42, 0.8) !important;
   border-color: rgba(255, 220, 161, 0.5) !important;
   color: var(--primary) !important;
+  transform: translateY(-2px) scale(1.02) !important;
 }
 
 /* ── 9. CARTES ACCUEIL ──────────────────────────────────────────── */
@@ -562,7 +561,6 @@ h1, h2, h3, h4, h5 { font-weight: inherit; margin: 0; }
 .resource-card {
   background: var(--surface-low);
   border-radius: 0.75rem;
-  overflow: hidden;
   border: 1px solid rgba(81, 69, 50, 0.2);
   transition: transform 0.5s ease, border-color 0.3s, box-shadow 0.5s;
   display: flex;
@@ -578,7 +576,8 @@ h1, h2, h3, h4, h5 { font-weight: inherit; margin: 0; }
 .resource-card-thumb {
   position: relative;
   height: 10rem;
-  overflow: hidden;
+  /* Arrondir les coins hauts pour compenser l'overflow:visible de la carte parente */
+  border-radius: 0.75rem 0.75rem 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -684,7 +683,7 @@ h1, h2, h3, h4, h5 { font-weight: inherit; margin: 0; }
 .bento-card-main {
   background: var(--surface-low);
   border-radius: 0.75rem;
-  overflow: hidden;
+  overflow: visible;
   border: 1px solid rgba(81, 69, 50, 0.18);
   transition: border-color 0.3s, box-shadow 0.4s;
 }
@@ -695,7 +694,7 @@ h1, h2, h3, h4, h5 { font-weight: inherit; margin: 0; }
 
 .bento-thumb-main {
   height: 14rem;
-  overflow: hidden;
+  border-radius: 0.75rem 0.75rem 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -865,7 +864,7 @@ h1, h2, h3, h4, h5 { font-weight: inherit; margin: 0; }
   margin-top: 3rem;
   background: var(--surface-mid);
   border-radius: 1rem;
-  overflow: hidden;
+  overflow: visible;
   border: 1px solid rgba(255, 184, 0, 0.1);
   position: relative;
 }
@@ -875,6 +874,8 @@ h1, h2, h3, h4, h5 { font-weight: inherit; margin: 0; }
   top: 0; right: 0;
   width: 33%;
   height: 100%;
+  /* border-radius droite pour coller aux coins arrondis de la section parente */
+  border-radius: 0 1rem 1rem 0;
   background: linear-gradient(to left, rgba(255, 184, 0, 0.06), transparent);
   pointer-events: none;
 }
@@ -983,11 +984,11 @@ h1, h2, h3, h4, h5 { font-weight: inherit; margin: 0; }
   width: 100% !important;
   min-width: unset !important;
   margin: 0 !important;
-  overflow: hidden !important;
 }
 .download:hover {
   background: var(--primary-container) !important;
   color: var(--on-primary-container) !important;
+  transform: translateX(3px) !important;
 }
 
 /* ── 14. MJ GATE ────────────────────────────────────────────────── */
@@ -1399,7 +1400,6 @@ footer.site-footer {
 .about-hero {
   position: relative;
   padding: 5rem 2rem 3rem;
-  overflow: hidden;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -1592,7 +1592,6 @@ footer.site-footer {
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(255, 184, 0, 0.07);
-  overflow: hidden;
 }
 
 .about-author-portrait-emoji {
@@ -1745,7 +1744,6 @@ footer.site-footer {
   border-radius: 1.5rem;
   padding: 4rem 3rem;
   text-align: center;
-  overflow: hidden;
   border: 1px solid rgba(255, 184, 0, 0.08);
 }
 
@@ -1780,4 +1778,7 @@ footer.site-footer {
   margin: 0.75rem auto 2rem;
   position: relative;
   z-index: 1;
+}
+.slide-animation-container {
+  overflow: visible !important;
 }

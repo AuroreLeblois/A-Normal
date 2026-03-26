@@ -1,26 +1,23 @@
 import { Section, ResourceFile } from '../types'
-import { HoverAnimation } from 'react-kariu'
 import { extractNameFromPath } from '../utils/fileUtils'
 
-/* ── Lien dans les cartes bento ──────────────────────────── */
+/* ── Lien bouton dans la carte principale ────────────────────── */
 function BentoDownloadLink({ file, style }: { file: ResourceFile; style?: React.CSSProperties }) {
   const label = file.label || extractNameFromPath(file.path)
   return (
-    <HoverAnimation duration={300} intensity={0.8} type="scale">
-      <a
-        href={file.path}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn-primary"
-        style={{ fontSize: '0.78rem', padding: '0.75rem 1.25rem', justifyContent: 'center', ...style }}
-      >
-        {file.icon} {label}
-      </a>
-    </HoverAnimation>
+    <a
+      href={file.path}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn-primary"
+      style={{ fontSize: '0.78rem', padding: '0.75rem 1.25rem', justifyContent: 'center', ...style }}
+    >
+      {file.icon} {label}
+    </a>
   )
 }
 
-/* ── Carte principale (grande, 8/12 cols) ──────────────────── */
+/* ── Carte principale (grande, 8/12 cols) ──────────────────────── */
 export function BentoMainCard({ section }: { section: Section }) {
   return (
     <div className="bento-card-main bento-main">
@@ -54,7 +51,7 @@ export function BentoMainCard({ section }: { section: Section }) {
   )
 }
 
-/* ── Carte latérale (side, 4/12 cols) ──────────────────────── */
+/* ── Carte latérale (side, 4/12 cols) ──────────────────────────── */
 export function BentoSideCard({ section }: { section: Section }) {
   return (
     <div className="bento-card-side bento-side">
