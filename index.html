@@ -1,40 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A/Normal — Ressources officielles</title>
-  <meta http-equiv='cache-control' content='no-cache'>
-  <meta http-equiv='expires' content='0'>
-  <meta http-equiv='pragma' content='no-cache'>
-  <meta name="description" content="Ressources officielles du jeu de rôle A/Normal — par Aurore Darcissac. Téléchargez ici les fiches vierges et supports de jeu.">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <!-- CSS critique inliné pour éviter le blocage du rendu -->
-  <style>
-    :root{--accent:#ffb300;--bg:#0c0c0c;--text:#f5f5f5;--muted:#b3b3b3}
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:"Segoe UI",Roboto,Arial,sans-serif;background:linear-gradient(180deg,#0c0c0c 0%,#1a1a1a 100%);color:var(--text);display:flex;flex-direction:column;align-items:center;min-height:100vh;padding:40px 20px}
-    header{text-align:center}
-    h2{color:var(--accent);font-size:1.1em;margin-bottom:20px;font-weight:400}
-    .loading{color:var(--muted);padding:40px;text-align:center}
-    #root{width:100%}
-  </style>
-</head>
-<body>
-  <script>
-    // GitHub Pages SPA — restaure le chemin depuis la query string
-    (function(l) {
-      if (l.search[1] === '/') {
-        var decoded = l.search.slice(1).split('&').map(function(s) {
-          return s.replace(/~and~/g, '&');
-        }).join('?');
-        window.history.replaceState(null, null,
-          l.pathname.slice(0, -1) + decoded + l.hash
-        );
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A/Normal — L'Archive</title>
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta
+      name="description"
+      content="Ressources officielles du jeu de rôle A/Normal — par Aurore Darcissac. Téléchargez ici les fiches vierges et supports de jeu."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Google Fonts — Typographie éditoriale -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS critique inliné pour éviter le blocage du rendu -->
+    <style>
+      :root {
+        --surface: #131313;
+        --primary-container: #ffb800;
+        --on-surface: #e5e2e1;
+        --font-label: "Space Grotesk", "Segoe UI", sans-serif;
       }
-    }(window.location));
-  </script>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Inter", "Segoe UI", sans-serif;
+        background: var(--surface);
+        color: var(--on-surface);
+        min-height: 100vh;
+        -webkit-font-smoothing: antialiased;
+      }
+      #root {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .loading {
+        color: #d5c4ab;
+        padding: 5rem;
+        text-align: center;
+        font-family: var(--font-label);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // GitHub Pages SPA — restaure le chemin depuis la query string
+      (function (l) {
+        if (l.search[1] === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash,
+          );
+        }
+      })(window.location);
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

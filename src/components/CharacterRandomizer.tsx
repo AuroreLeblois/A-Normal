@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { HoverAnimation, Title } from 'react-kariu'
+import { useFetchJson } from '../hooks/useFetchJson'
 
 interface Anormalite {
   id: string
@@ -10,6 +11,10 @@ interface Anormalite {
   note?: string
 }
 
+interface AnormalitesData {
+  anormalites: Anormalite[]
+}
+
 interface CharacterResult {
   gender: 'homme' | 'femme'
   age: number
@@ -18,43 +23,35 @@ interface CharacterResult {
 }
 
 function CharacterRandomizer() {
-  const [result, setResult] = useState<CharacterResult | null>(null)
+  const [result, setResult]     = useState<CharacterResult | null>(null)
   const [isRolling, setIsRolling] = useState(false)
-  const [anormalites, setAnormalites] = useState<Anormalite[]>([])
 
-  useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}anormalites.json`)
-      .then(res => res.json())
-      .then(data => setAnormalites(data.anormalites))
-      .catch(err => console.error('Erreur chargement anormalités:', err))
-  }, [])
+  const { data } = useFetchJson<AnormalitesData>(`${import.meta.env.BASE_URL}anormalites.json`)
+  const anormalites = data?.anormalites ?? []
 
   const getRandomAnormalites = (): { connue: Anormalite; inconnue: Anormalite } => {
     const shuffled = [...anormalites].sort(() => Math.random() - 0.5)
-    return {
-      connue: shuffled[0],
-      inconnue: shuffled[1]
-    }
+    return { connue: shuffled[0], inconnue: shuffled[1] }
   }
 
   const rollCharacter = () => {
     if (anormalites.length < 2) return
-    
+
     setIsRolling(true)
-    
+
     let rolls = 0
     const maxRolls = 10
-    
+
     const interval = setInterval(() => {
       const { connue, inconnue } = getRandomAnormalites()
       setResult({
         gender: Math.random() < 0.5 ? 'homme' : 'femme',
         age: Math.floor(Math.random() * (109 - 15 + 1)) + 15,
         anormaliteConnue: connue,
-        anormaliteInconnue: inconnue
+        anormaliteInconnue: inconnue,
       })
       rolls++
-      
+
       if (rolls >= maxRolls) {
         clearInterval(interval)
         setIsRolling(false)
@@ -64,11 +61,11 @@ function CharacterRandomizer() {
 
   return (
     <div className="randomizer-container">
-      <Title priority={4} text="🎲 Aide au tirage de personnage" align="center"/>
-      
+      <Title priority={4} text="🎲 Aide au tirage de personnage" align="center" />
+
       <div className="randomizer-buttons">
         <HoverAnimation duration={200} intensity={0.55} type="scale" className="randomizer-btn-container">
-          <button 
+          <button
             className={`randomizer-btn ${isRolling ? 'rolling' : ''}`}
             onClick={rollCharacter}
             disabled={isRolling || anormalites.length < 2}
@@ -76,10 +73,10 @@ function CharacterRandomizer() {
             {isRolling ? '🎲 Tirage...' : '🎲 Tirer'}
           </button>
         </HoverAnimation>
-        
+
         {result && !isRolling && (
           <HoverAnimation duration={200} intensity={0.55} type="scale">
-            <button 
+            <button
               className="randomizer-btn clear-btn"
               onClick={() => setResult(null)}
             >
@@ -101,7 +98,7 @@ function CharacterRandomizer() {
             <span className="result-label">Âge</span>
             <span className="result-value">🎂 {result.age} ans</span>
           </div>
-          
+
           {result.anormaliteConnue && (
             <div className="result-item anormalite connue">
               <span className="result-label">👁️ Anormalité connue</span>
@@ -109,7 +106,7 @@ function CharacterRandomizer() {
               <span className="anormalite-points">{result.anormaliteConnue.points} pts</span>
             </div>
           )}
-          
+
           {result.anormaliteInconnue && (
             <div className="result-item anormalite inconnue">
               <span className="result-label">🔒 Anormalité inconnue</span>

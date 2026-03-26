@@ -1,37 +1,64 @@
 // @ts-ignore
 import diceSvg from '/dice.svg'
-import { SlideAnimation, Title } from 'react-kariu'
+import { SlideAnimation, Button } from 'react-kariu'
 import { Link, useLocation } from 'react-router-dom'
-import favicon from '/favicon.svg'
-// HashRouter: les chemins sont sous forme /#/path
 
 function Header() {
   const location = useLocation()
 
   return (
-    <header>
-      <SlideAnimation direction="top" duration={500} delay={100} trigger={true}>
-        <Link to="/">
-          <img src={diceSvg} alt="Icône de dé" />
-        </Link>
-      </SlideAnimation>
-      <SlideAnimation direction="top" duration={500} delay={300} trigger={true}>
-        <Title priority={1} text="A/NORMAL" />
-      </SlideAnimation>
-      <SlideAnimation direction="top" duration={500} delay={600} trigger={true}>
-        <Title priority={2} text="Ressources officielles du jeu — Aurore Darcissac" />
-      </SlideAnimation>
-      <SlideAnimation direction="top" duration={500} delay={800} trigger={true}>
-        <nav className="main-nav">
-        <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>
-          <img className="favicon" src={favicon} alt="Icône de dé" /> Accueil
-          </Link>
-          <Link to="/meneur" className={`nav-link ${location.pathname === '/meneur' ? 'active' : ''}`}>
-            🎭 Meneur de Jeu
-          </Link>
-          <Link to="/joueurs" className={`nav-link ${location.pathname === '/joueurs' ? 'active' : ''}`}>
-            🎲 Joueurs
-          </Link>
+    <header className="main-header">
+      <SlideAnimation direction="top" duration={500} delay={50} trigger={true}>
+        <nav className="nav-container">
+
+          {/* ── Gauche : logo + liens ── */}
+          <div className="nav-left">
+            <Link to="/" className="nav-logo">
+              A Normal
+            </Link>
+
+            <div className="nav-links">
+              <Link
+                to="/"
+                className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
+              >
+                Accueil
+              </Link>
+              <Link
+                to="/meneur"
+                className={`nav-link ${location.pathname === '/meneur' ? 'active' : ''}`}
+              >
+                Meneur de Jeu
+              </Link>
+              <Link
+                to="/joueurs"
+                className={`nav-link ${location.pathname === '/joueurs' ? 'active' : ''}`}
+              >
+                Joueurs
+              </Link>
+              <Link
+                to="/a-propos"
+                className={`nav-link ${location.pathname === '/a-propos' ? 'active' : ''}`}
+              >
+                À propos
+              </Link>
+            </div>
+          </div>
+
+          {/* ── Droite : dé + soutenir ── */}
+          <div className="nav-right">
+            <Link to="/" className="nav-dice-btn" aria-label="Accueil">
+              <img src={diceSvg} alt="dé" />
+            </Link>
+
+            <Button
+              label="☕ Soutenir"
+              primary
+              className="nav-support-btn"
+              onClick={() => window.open('https://buymeacoffee.com/lebloisaurk', '_blank')}
+            />
+          </div>
+
         </nav>
       </SlideAnimation>
     </header>

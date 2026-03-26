@@ -1,47 +1,63 @@
-import { Section, ResourceFile } from '../types'
-import { HoverAnimation, Title } from 'react-kariu'
+import { Section } from '../types'
+import { Title } from 'react-kariu'
+import DownloadLink from './DownloadLink'
 
 interface Props {
   section: Section
 }
 
-function extractNameFromPath(filePath: string): string {
-  const fileName = filePath.split('/').pop() || filePath
-  const nameWithoutExt = fileName.replace(/\.[^.]+$/, '')
-  return nameWithoutExt.replace(/[-_]/g, ' ')
-}
-
-function DownloadLink({ file }: { file: ResourceFile }) {
-  const label = file.label || extractNameFromPath(file.path);
-  
-  return (
-    <HoverAnimation
-    duration={500}
-    intensity={1}
-    type="scale"
-  >
-    <a className="download" href={file.path} target="_blank">
-      {file.icon} {label}
-    </a>
-    </HoverAnimation>
-  )
-}
-
 function ResourceSection({ section }: Props) {
   return (
-    <section id={section.id}>
-        <div className="resource-section-container" style={{padding: "1rem"}}>
-        <Title priority={4} text={section.icon + " " + section.title} align="left"/>
-      
-      {section.files.length > 0 ? (
-        section.files.map((file, index) => (
-          <DownloadLink key={index} file={file} />
-        ))
-      ) : section.placeholder ? (
-        <div className="placeholder">{section.placeholder}</div>
-      ) : null}
+    <div className="resource-card">
+
+      {/* ── Zone thumbnail ── */}
+      <div className="resource-card-thumb">
+        <span className="resource-card-thumb-icon">{section.icon}</span>
+        <div className="resource-card-thumb-overlay" />
+        {/* Badge catégorie */}
+        <span className="resource-card-badge">{section.title}</span>
       </div>
-    </section>
+
+      {/* ── Corps de la carte ── */}
+      <div className="resource-card-body">
+
+        <Title
+          priority={4}
+          text={section.title}
+          align="left"
+          className="resource-card-title"
+        />
+
+        {/* Métadonnées : nombre de fichiers */}
+        {section.files.length > 0 && (
+          <p style={{
+            fontFamily: 'var(--f-label)',
+            fontSize: '0.65rem',
+            textTransform: 'uppercase',
+            letterSpacing: '0.15em',
+            color: 'rgba(213, 196, 171, 0.5)',
+            marginBottom: '0.875rem',
+          }}>
+            <span className="material-symbols-outlined" style={{ fontSize: '0.8rem', verticalAlign: 'middle', marginRight: '0.25rem' }}>
+              description
+            </span>
+            {section.files.length} fichier{section.files.length > 1 ? 's' : ''}
+          </p>
+        )}
+
+        {/* Liens de téléchargement */}
+        <div className="resource-card-files">
+          {section.files.length > 0 ? (
+            section.files.map((file, index) => (
+              <DownloadLink key={index} file={file} />
+            ))
+          ) : section.placeholder ? (
+            <p className="placeholder">{section.placeholder}</p>
+          ) : null}
+        </div>
+
+      </div>
+    </div>
   )
 }
 

@@ -1,107 +1,70 @@
-import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ResourcesConfig } from '../types'
 import ResourceSection from '../components/ResourceSection'
-import { Layout } from 'react-kariu'
+import MJGate from '../components/MJGate'
+import PageHeader from '../components/PageHeader'
+import PromoSection from '../components/PromoSection'
+import ErrorBanner from '../components/ErrorBanner'
+import { SlideAnimation } from 'react-kariu'
+import { useFetchJson } from '../hooks/useFetchJson'
+import { useSessionStorage } from '../hooks/useSessionStorage'
 
 function MJPage() {
-  const [config, setConfig] = useState<ResourcesConfig | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [isMJConfirmed, setIsMJConfirmed] = useState<boolean>(() => {
-    return sessionStorage.getItem('mj-confirmed') === 'true'
-  });
+  const [isMJConfirmed, setIsMJConfirmed] = useSessionStorage('mj-confirmed', false)
 
-  useEffect(() => {
-    if (!isMJConfirmed) return;
+  const { data: config, error } = useFetchJson<ResourcesConfig>(
+    isMJConfirmed ? `${import.meta.env.BASE_URL}resources-mj.json` : ''
+  )
 
-    fetch(`${import.meta.env.BASE_URL}resources-mj.json`)
-      .then(res => {
-        if (!res.ok) throw new Error(`Erreur: ${res.status}`)
-        return res.json()
-      })
-      .then(setConfig)
-      .catch(err => setError(err.message))
-      .finally(() => {
-        sessionStorage.setItem('page', 'home')
-      })
-  }, [isMJConfirmed])
+  const handleConfirmMJ = () => setIsMJConfirmed(true)
 
-  const handleConfirmMJ = () => {
-    sessionStorage.setItem('mj-confirmed', 'true');
-    setIsMJConfirmed(true);
-  };
-
-  // Écran de confirmation MJ
+  /* ── Écran de garde ── */
   if (!isMJConfirmed) {
-    return (
-      <div className="mj-gate">
-          <div className="mj-gate-content">
-            <div className="mj-gate-icon">🎭</div>
-            <h2 className="mj-gate-title">Espace Meneur de Jeu</h2>
-            <div className="mj-gate-warning">
-              <span className="warning-icon">⚠️</span>
-              <p>
-                <strong>Attention !</strong> Cette section contient des <strong>spoilers</strong> destinés uniquement au Meneur de Jeu.
-              </p>
-              <p>
-                Si vous êtes un <strong>joueur</strong>, veuillez retourner à l'espace Joueurs pour préserver votre expérience de jeu.
-              </p>
-            </div>
-            <div className="mj-gate-buttons">
-              <button className="mj-confirm-btn" onClick={handleConfirmMJ}>
-                🎲 Je suis le MJ, accéder au contenu
-              </button>
-              <Link to="/joueurs" className="mj-back-btn">
-                👥 Je suis un joueur, retourner
-              </Link>
-            </div>
-          </div>
-      </div>
-    );
+    return <MJGate onConfirm={handleConfirmMJ} />
   }
 
+  /* ── Contenu MJ ── */
   return (
-    <>
-      <section className="section">
-        <p>
-          Bienvenue sur la page officielle des supports de jeu <strong>A/Normal</strong>.<br />
-          Ici, vous pouvez télécharger les fiches vierges, les tableaux de compétences, les fiches de PNJ principaux et autres ressources pour enrichir vos parties.
-        </p>
-      </section>
-      <section className="section">
-        <p>
-          Cette page est destinée aux <strong> MJ</strong> et contient des spoilers.
-          Si vous êtes un joueur, veuillez retourner à l'espace Joueurs pour préserver votre expérience de jeu.
-        </p>
-      </section>
-      <section className="section">
-        <Link to="/joueurs" className="mj-back-btn">
-              👥 Je suis un joueur, aller à l'espace Joueurs
-          </Link>
-        </section>
-      <main id="resources-container">
-        {error && (
-          <div className="error">
-            ⚠️ Impossible de charger les ressources. Veuillez rafraîchir la page.
-          </div>
-        )}
+    <div className="page-content">
 
-        {config && (
-          <>
-            {/* Groupe les sections par 2 */}
-            <Layout flexDirection="row" flexWrap="wrap" gap={"2rem"} alignItems="start">
-            {Array.from({ length: Math.ceil(config.sections.length / 2) }, (_, i) => (
-              <div key={i.toString()}>
-                {config.sections.slice(i * 2, i * 2 + 2).map(section => (
-                  <ResourceSection key={section.id+i.toString()} section={section} />
-                ))}
-                </div>
+      <PageHeader
+        badge="⚠️ Contient des spoilers"
+        badgeClass="spoiler"
+        titleJsx={
+          <h1 className="mj-split-title">
+            Espace <span className="accent">Meneur de Jeu</span>
+          </h1>
+        }
+        description="Archives confidentielles réservées aux architectes de l'Étrange.
+          Accédez aux structures narratives, cartographies occultes et dossiers
+          de PNJ pour orchestrer vos sessions."
+      />
+
+      {/* ── Retour joueurs ── */}
+      <SlideAnimation direction="bottom" duration={500} delay={180} trigger={true}>
+        <div style={{ marginBottom: '2rem' }}>
+          <Link to="/joueurs" className="mj-back-btn" style={{ display: 'inline-flex', width: 'auto' }}>
+            👥 Je suis un joueur — espace Joueurs
+          </Link>
+        </div>
+      </SlideAnimation>
+
+      {error && <ErrorBanner />}
+
+      {/* ── Grille staggered 3 colonnes ── */}
+      {config && (
+        <SlideAnimation direction="bottom" duration={600} delay={280} trigger={true}>
+          <div className="resource-grid-stagger">
+            {config.sections.map(section => (
+              <ResourceSection key={section.id} section={section} />
             ))}
-            </Layout>
-          </>
-        )}
-      </main>
-    </>
+          </div>
+        </SlideAnimation>
+      )}
+
+      <PromoSection />
+
+    </div>
   )
 }
 
