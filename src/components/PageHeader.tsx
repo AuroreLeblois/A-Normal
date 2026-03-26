@@ -23,7 +23,6 @@ interface Props {
 }
 
 function PageHeader({
-  icon,
   badge,
   badgeClass = '',
   title,

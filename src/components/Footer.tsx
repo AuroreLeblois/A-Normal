@@ -1,5 +1,3 @@
-import { HoverAnimation, Button } from 'react-kariu'
-
 function Footer() {
   const currentYear = new Date().getFullYear()
 
