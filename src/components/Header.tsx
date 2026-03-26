@@ -14,7 +14,7 @@ function Header() {
           {/* ── Gauche : logo + liens ── */}
           <div className="nav-left">
             <Link to="/" className="nav-logo">
-              A Normal
+              A/Normal
             </Link>
 
             <div className="nav-links">
