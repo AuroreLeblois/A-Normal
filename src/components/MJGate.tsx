@@ -30,9 +30,11 @@ function MJGate({ onConfirm }: Props) {
                 🎲 Je suis le MJ — accéder au contenu
               </button>
             </HoverAnimation>
+            <HoverAnimation duration={250} intensity={1} type="scale">
             <Link to="/joueurs" className="mj-back-btn">
-              👥 Je suis un joueur, retourner
+              👥 Je suis un joueur
             </Link>
+            </HoverAnimation>
           </div>
         </div>
       </SlideAnimation>

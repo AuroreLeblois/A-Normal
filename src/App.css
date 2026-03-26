@@ -996,10 +996,12 @@ h1, h2, h3, h4, h5 { font-weight: inherit; margin: 0; }
   justify-content: center;
   align-items: center;
   min-height: 70vh;
+  width: 100%;
   padding: 2rem;
 }
 
 .mj-gate-content {
+  align-self: center;
   background: var(--surface-low);
   border-radius: 1.5rem;
   padding: 3rem;

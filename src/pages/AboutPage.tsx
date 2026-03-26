@@ -59,14 +59,6 @@ function AboutPage() {
                 Cette archive rassemble toutes les ressources pour jouer, maîtriser et
                 enrichir votre jeu de rôle.
               </p>
-              <HoverAnimation duration={250} intensity={1} type="scale">
-                <Button
-                  label="☕ Soutenir le projet"
-                  primary
-                  className="btn-primary"
-                  onClick={() => window.open(BMC_URL, '_blank')}
-                />
-              </HoverAnimation>
             </div>
 
             {/* Portrait placeholder */}
@@ -74,7 +66,6 @@ function AboutPage() {
               <div className="about-portrait-glow" />
               <div className="about-portrait-card">
                 <span className="about-portrait-emoji">🎭</span>
-                <span className="about-portrait-label">Aurore Darcissac</span>
               </div>
             </div>
 
