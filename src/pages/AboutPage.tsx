@@ -3,17 +3,17 @@ import { BMC_URL } from '../constants/links'
 
 /* ── Statistiques ───────────────────────────────────────────── */
 const STATS = [
-  { value: '12',  label: 'Sessions jouées' },
-  { value: '142', label: 'Pages de contenu' },
-  { value: '76',  label: 'Ressources libres' },
-  { value: '31',  label: 'PNJ archivés'     },
+  { value: '4',  label: 'Sessions jouées' },
+  { value: '250', label: 'Pages de contenu' },
+  { value: '20',  label: 'Ressources libres' },
+  { value: '10', label: 'Scénarios' }
 ]
 
 /* ── Passions / tags ────────────────────────────────────────── */
 const PASSIONS = [
   'Horreur psychologique', 'Littérature noir', 'Jeu de rôle narratif',
-  'Worldbuilding', 'Musique ambiante', 'Cinéma de genre',
-  'Écriture collaborative', 'Folklore européen',
+  'développement', 'Musique ambiante', 'Cinéma de genre',
+  'Écriture collaborative'
 ]
 
 /* ── Anecdotes / jalons ─────────────────────────────────────── */
@@ -28,7 +28,7 @@ const ANECDOTES = [
     icon: '🕯️',
     label: 'Première session',
     title: 'La Première Session',
-    text: "La première session a duré huit heures. Neuf joueurs, et plein d'émotions, des avis divergents et des questions toujours plus profondes.",
+    text: "La première session a duré huit heures. Neuf joueurs, plein d'émotions, des avis divergents et des questions toujours plus profondes.",
   },
 ]
 
@@ -49,15 +49,15 @@ function AboutPage() {
             <div className="about-hero-text">
               <span className="hero-eyebrow">À Propos</span>
               <h1 className="about-hero-title">
-                La Quête de<br />
-                <span className="accent">l'Obscur</span>
+                L'Archive de<br />
+                <span className="accent">l'Anormalité</span>
               </h1>
               <p className="about-hero-body">
                 A/Normal est un jeu de rôle créé par Aurore Darcissac — une exploration
-                des frontières entre le réel et l'étrange, où chaque session tisse une
-                histoire unique entre enquête psychologique et horreur lovecraftienne.
+                où chaque session, chaque choix, chaque décision tisse une
+                histoire unique entre enquête psychologique et dystopique.
                 Cette archive rassemble toutes les ressources pour jouer, maîtriser et
-                enrichir votre table.
+                enrichir votre jeu de rôle.
               </p>
               <HoverAnimation duration={250} intensity={1} type="scale">
                 <Button
@@ -109,14 +109,14 @@ function AboutPage() {
             <span className="about-section-eyebrow">La créatrice</span>
             <Title
               priority={2}
-              text="L'Esprit derrière l'Obscur"
+              text="L'Esprit derrière l'Anormalité"
               className="about-author-title"
             />
             <p className="about-author-body">
               Aurore Darcissac est auteure, game designer et Meneuse de Jeu passionnée.
-              Depuis plus de cinq ans, elle développe l'univers de A/Normal — un monde
-              où les anormalités humaines ne sont pas des malédictions, mais les seules
-              clés capables d'ouvrir les portes de l'étrange.
+              Depuis plus de deux ans, elle développe l'univers de A/Normal — un monde
+              où les anormalités humaines ne sont que des malédictions, mais aussi les seules
+              clés pour découvrir les portes de l'histoire.
             </p>
             <p className="about-author-body">
               Formée aux arts narratifs et à l'écriture de scénario, elle conçoit chaque
