@@ -49,8 +49,8 @@ function AboutPage() {
             <div className="about-hero-text">
               <span className="hero-eyebrow">À Propos</span>
               <h1 className="about-hero-title">
-                La Quête de<br />
-                <span className="accent">l'Anormalité</span>
+                L'origine d'<br />
+                <span className="accent">A/NORMAL</span>
               </h1>
               <p className="about-hero-body">
                 A/Normal est un jeu de rôle créé par Aurore Darcissac — une exploration
@@ -59,12 +59,6 @@ function AboutPage() {
                 Cette archive rassemble toutes les ressources pour jouer, maîtriser et
                 enrichir votre table.
               </p>
-              <Button
-                label="☕ Soutenir le projet"
-                primary
-                className="btn-primary"
-                onClick={() => window.open(BMC_URL, '_blank')}
-              />
             </div>
 
             {/* Portrait placeholder */}
