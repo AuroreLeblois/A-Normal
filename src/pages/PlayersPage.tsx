@@ -42,7 +42,6 @@ function PlayersPage() {
             <div className="bento-full">
               <div className="bento-card-half">
                 <div className="bento-card-half-inner">
-                  <div className="bento-card-half-icon">🎲</div>
                   <div style={{ flex: 1 }}>
                     <h4 className="bento-card-half-title">Générateur de personnage</h4>
                     <p className="bento-card-half-desc">

@@ -685,7 +685,7 @@ h1, h2, h3, h4, h5 { font-weight: inherit; margin: 0; }
   border-radius: 0.75rem;
   overflow: visible;
   border: 1px solid rgba(81, 69, 50, 0.18);
-  transition: border-color 0.3s, box-shadow 0.4s;
+  transition: border-color 0.3s, box-shadow 0.4s, ease-out 0.75s;
 }
 .bento-card-main:hover {
   border-color: rgba(255, 184, 0, 0.22);
@@ -709,7 +709,18 @@ h1, h2, h3, h4, h5 { font-weight: inherit; margin: 0; }
   filter: drop-shadow(0 0 24px rgba(255, 184, 0, 0.3));
   transition: transform 0.4s;
 }
-.bento-card-main:hover .bento-thumb-icon { transform: scale(1.08); }
+.bento-thumb-image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.35));
+  transition: transform 0.4s ease-out 1.5s;
+}
+.bento-card-main:hover .bento-thumb-icon { transform: scale(1.05); }
+.bento-card-main:hover { transform: scale(1.03); }
 .bento-thumb-overlay-main {
   position: absolute;
   inset: 0;
@@ -1485,6 +1496,16 @@ footer.site-footer {
   gap: 0.75rem;
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 184, 0, 0.08);
+  overflow: hidden;
+  padding: 0;
+}
+
+.about-portrait-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .about-portrait-emoji {
@@ -1497,12 +1518,17 @@ footer.site-footer {
 }
 
 .about-portrait-label {
+  position: absolute;
+  left: 1.5rem;
+  right: 1.5rem;
+  bottom: 1.25rem;
   font-family: var(--f-label);
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--primary);
   opacity: 0.8;
+  z-index: 1;
 }
 
 /* ── Stats ────────────────────────────────────────────────────────── */
@@ -1592,6 +1618,15 @@ footer.site-footer {
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(255, 184, 0, 0.07);
+  overflow: hidden;
+}
+
+.about-author-portrait-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .about-author-portrait-emoji {

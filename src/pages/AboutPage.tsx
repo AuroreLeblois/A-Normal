@@ -5,8 +5,8 @@ import { BMC_URL } from '../constants/links'
 const STATS = [
   { value: '12',  label: 'Sessions jouées' },
   { value: '142', label: 'Pages de contenu' },
-  { value: '76',  label: 'Ressources libres' },
-  { value: '31',  label: 'PNJ archivés'     },
+  { value: '16',  label: 'Ressources libres' },
+  { value: '20',  label: 'PNJ archivés'     },
 ]
 
 /* ── Passions / tags ────────────────────────────────────────── */
@@ -50,7 +50,7 @@ function AboutPage() {
               <span className="hero-eyebrow">À Propos</span>
               <h1 className="about-hero-title">
                 La Quête de<br />
-                <span className="accent">l'Obscur</span>
+                <span className="accent">l'Anormalité</span>
               </h1>
               <p className="about-hero-body">
                 A/Normal est un jeu de rôle créé par Aurore Darcissac — une exploration
@@ -71,8 +71,7 @@ function AboutPage() {
             <div className="about-hero-portrait">
               <div className="about-portrait-glow" />
               <div className="about-portrait-card">
-                <span className="about-portrait-emoji">🎭</span>
-                <span className="about-portrait-label">Aurore Darcissac</span>
+                <img src={`${import.meta.env.BASE_URL}images/test.png`} alt="Aurore Darcissac" />
               </div>
             </div>
 
@@ -93,13 +92,13 @@ function AboutPage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════
-          L'ESPRIT DERRIÈRE L'OBSCUR
+          L'ESPRIT Derrière l'Anormalité
       ══════════════════════════════════════════════════════════ */}
       <SlideAnimation direction="bottom" duration={600} delay={150} trigger={true}>
         <section className="about-author">
           <div className="about-author-portrait">
-            <div className="about-author-portrait-inner">
-              <span className="about-author-portrait-emoji">✍️</span>
+              <div className="about-author-portrait-inner">
+                <img src={`${import.meta.env.BASE_URL}images/photo-pro.png`} alt="Aurore Darcissac" />
             </div>
           </div>
 
@@ -107,14 +106,14 @@ function AboutPage() {
             <span className="about-section-eyebrow">La créatrice</span>
             <Title
               priority={2}
-              text="L'Esprit derrière l'Obscur"
+              text="L'Esprit derrière l'Anormalité"
               className="about-author-title"
             />
             <p className="about-author-body">
               Aurore Darcissac est auteure, game designer et Meneuse de Jeu passionnée.
-              Depuis plus de cinq ans, elle développe l'univers de A/Normal — un monde
+              Depuis 2 ans, elle développe l'univers de A/Normal — un monde
               où les anormalités humaines ne sont pas des malédictions, mais les seules
-              clés capables d'ouvrir les portes de l'étrange.
+              clés capables d'ouvrir les portes de l'avenir.
             </p>
             <p className="about-author-body">
               Formée aux arts narratifs et à l'écriture de scénario, elle conçoit chaque
@@ -123,7 +122,7 @@ function AboutPage() {
               autour de la table.
             </p>
             <blockquote className="about-quote">
-              "Les mots sont les seules chaînes qui retiennent l'oubli."
+              "Ce que nous appelons anormal n’est que la preuve que le monde ne tient pas debout."
             </blockquote>
           </div>
         </section>
@@ -135,7 +134,7 @@ function AboutPage() {
       <SlideAnimation direction="bottom" duration={600} delay={150} trigger={true}>
         <section className="about-anecdotes">
           <span className="about-section-eyebrow" style={{ display: 'block', marginBottom: '1.5rem' }}>
-            Jalons de l'Archive
+            Archives d'A/Normal
           </span>
 
           <div className="about-anecdotes-grid">

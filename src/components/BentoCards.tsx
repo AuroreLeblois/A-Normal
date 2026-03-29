@@ -1,6 +1,20 @@
 import { Section, ResourceFile } from '../types'
 import { extractNameFromPath } from '../utils/fileUtils'
 
+function BentoSectionVisual({ section }: { section: Section }) {
+  if (section.id === 'joueurs') {
+    return (
+      <img
+        src={`${import.meta.env.BASE_URL}images/fiche%20joueur%20vierge.png`}
+        alt="Aperçu de la fiche joueur"
+        className="bento-thumb-image"
+      />
+    )
+  }
+
+  return <span className="bento-thumb-icon">{section.icon}</span>
+}
+
 /* ── Lien bouton dans la carte principale ────────────────────── */
 function BentoDownloadLink({ file, style }: { file: ResourceFile; style?: React.CSSProperties }) {
   const label = file.label || extractNameFromPath(file.path)
@@ -23,7 +37,7 @@ export function BentoMainCard({ section }: { section: Section }) {
     <div className="bento-card-main bento-main">
       {/* Zone "image" */}
       <div className="bento-thumb-main">
-        <span className="bento-thumb-icon">{section.icon}</span>
+        <BentoSectionVisual section={section} />
         <div className="bento-thumb-overlay-main" />
         <span className="bento-label-featured">Essentiel</span>
       </div>
@@ -34,7 +48,6 @@ export function BentoMainCard({ section }: { section: Section }) {
           <h3 className="bento-card-main-title">{section.title}</h3>
           <p className="bento-card-main-desc">
             La version la plus récente, optimisée pour l'immersion narrative.
-            Inclut des sections pour l'historique et l'équipement.
           </p>
         </div>
 

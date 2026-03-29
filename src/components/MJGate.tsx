@@ -8,7 +8,7 @@ interface Props {
 function MJGate({ onConfirm }: Props) {
   return (
     <div className="mj-gate">
-      <SlideAnimation direction="bottom" duration={500} delay={100} trigger={true}>
+      <SlideAnimation direction="bottom" duration={500} delay={100} trigger={true} sx={{ display: 'flex', justifyContent: 'center' }}>
         <div className="mj-gate-content">
           <span className="mj-gate-icon">🎭</span>
           <div className="mj-gate-spoiler-badge">⚠️ Contient des spoilers</div>
