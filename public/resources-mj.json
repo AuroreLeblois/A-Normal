@@ -90,6 +90,11 @@
           "path": "pdf/Scénarios-intermédiaires/René-Lazare.pdf",
           "icon": "🐉",
           "label": "René Lazare"
+        },
+        {
+          "path": "pdf/Scénarios-variables/Pélagie.pdf",
+          "icon": "🐙",
+          "label": "Pélagie"
         }
       ],
       "placeholder": "À venir (à la sortie du livret)"

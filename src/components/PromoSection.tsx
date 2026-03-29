@@ -13,13 +13,13 @@ function PromoSection() {
               <span className="accent">Archives Complètes</span>
             </h2>
             <p className="promo-desc">
-              Accédez à l'intégralité du corpus théorique et pratique de l'Archive.
+              Accédez à l'intégralité du texte original.
               Plus de 300 pages de contenu exclusif, des scénarios inédits et des
               mécaniques avancées pour les Meneurs de Jeu les plus exigeants.
             </p>
             <div className="promo-actions">
               <Button
-                label="Commander le Livre"
+                label="Télécharger le Livre"
                 primary
                 className="btn-primary"
                 onClick={() => {}}
