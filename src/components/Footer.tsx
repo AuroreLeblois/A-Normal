@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function Footer() {
   const currentYear = new Date().getFullYear()
 
@@ -14,7 +16,9 @@ function Footer() {
 
       {/* ── Centre : liens ── */}
       <nav className="footer-links">
-        <span className="footer-link">Mentions légales</span>
+        <Link className="footer-link" to="/mentions-legales">
+          Mentions légales
+        </Link>
         <a
           className="footer-link"
           href="https://buymeacoffee.com/lebloisaurk"

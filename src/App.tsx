@@ -8,6 +8,7 @@ const HomePage    = lazy(() => import('./pages/HomePage'))
 const MJPage      = lazy(() => import('./pages/MJPage'))
 const PlayersPage = lazy(() => import('./pages/PlayersPage'))
 const AboutPage   = lazy(() => import('./pages/AboutPage'))
+const LegalPage   = lazy(() => import('./pages/LegalPage'))
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/meneur"    element={<MJPage />} />
             <Route path="/joueurs"   element={<PlayersPage />} />
             <Route path="/a-propos"  element={<AboutPage />} />
+            <Route path="/mentions-legales" element={<LegalPage />} />
           </Routes>
         </Suspense>
       </div>
