@@ -5,6 +5,7 @@ import ErrorBanner from '../components/ErrorBanner'
 import { BentoMainCard, BentoSideCard } from '../components/BentoCards'
 import { SlideAnimation, Button } from 'react-kariu'
 import { useFetchJson } from '../hooks/useFetchJson'
+import { DISCORD_URL } from '../constants/links'
 
 function PlayersPage() {
   const { data: config, error } = useFetchJson<ResourcesConfig>(
@@ -67,7 +68,7 @@ function PlayersPage() {
               <Button
                 label="Rejoindre le Discord"
                 className="btn-outline"
-                onClick={() => {}}
+                onClick={() => window.open(DISCORD_URL, '_blank', 'noopener,noreferrer')}
                 sx={{ fontSize: '0.75rem', padding: '0.6rem 1.25rem' }}
               />
             </div>

@@ -1,5 +1,5 @@
 import { SlideAnimation, Title, Button } from 'react-kariu'
-import { BMC_URL } from '../constants/links'
+import { BMC_URL, DISCORD_URL } from '../constants/links'
 
 /* ── Statistiques ───────────────────────────────────────────── */
 const STATS = [
@@ -203,7 +203,7 @@ function AboutPage() {
               <Button
                 label="💬 Rejoindre le Discord"
                 className="btn-outline"
-                onClick={() => {}}
+                onClick={() => window.open(DISCORD_URL, '_blank', 'noopener,noreferrer')}
               />
             </div>
           </div>
