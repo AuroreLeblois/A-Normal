@@ -1,5 +1,5 @@
 import { ResourceFile } from '../types'
-import { extractNameFromPath, getFileType } from '../utils/fileUtils'
+import { extractNameFromPath, getFileType, getPublicAssetPath, isExternalUrl } from '../utils/fileUtils'
 
 interface Props {
   file: ResourceFile
@@ -7,15 +7,18 @@ interface Props {
 }
 
 function DownloadLink({ file, className = 'download' }: Props) {
-  const label = file.label || extractNameFromPath(file.path)
-  const type  = getFileType(file.path)
+  const label    = file.label || extractNameFromPath(file.path)
+  const type     = getFileType(file.path)
+  const href     = getPublicAssetPath(file.path)
+  const external = isExternalUrl(file.path)
 
   return (
     <a
       className={className}
-      href={file.path}
-      target="_blank"
-      rel="noopener noreferrer"
+      href={href}
+      download={external ? undefined : ''}
+      target={external ? '_blank' : undefined}
+      rel={external ? 'noopener noreferrer' : undefined}
     >
       {file.icon && (
         <span style={{ fontSize: '0.95rem', flexShrink: 0 }}>{file.icon}</span>

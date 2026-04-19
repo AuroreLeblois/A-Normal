@@ -1,8 +1,8 @@
 import { Section, ResourceFile } from '../types'
-import { extractNameFromPath } from '../utils/fileUtils'
+import { extractNameFromPath, getPublicAssetPath, isExternalUrl } from '../utils/fileUtils'
 
 function BentoSectionVisual({ section }: { section: Section }) {
-  if (section.id === 'joueurs') {
+  if (section.id === 'livret-joueur' || section.id === 'fiche-joueur') {
     return (
       <img
         src={`${import.meta.env.BASE_URL}images/fiche%20joueur%20vierge.png`}
@@ -17,16 +17,21 @@ function BentoSectionVisual({ section }: { section: Section }) {
 
 /* ── Lien bouton dans la carte principale ────────────────────── */
 function BentoDownloadLink({ file, style }: { file: ResourceFile; style?: React.CSSProperties }) {
-  const label = file.label || extractNameFromPath(file.path)
+  const label    = file.label || extractNameFromPath(file.path)
+  const href     = getPublicAssetPath(file.path)
+  const external = isExternalUrl(file.path)
+
   return (
     <a
-      href={file.path}
-      target="_blank"
-      rel="noopener noreferrer"
+      href={href}
+      download={external ? undefined : ''}
+      target={external ? '_blank' : undefined}
+      rel={external ? 'noopener noreferrer' : undefined}
       className="btn-primary"
       style={{ fontSize: '0.78rem', padding: '0.75rem 1.25rem', justifyContent: 'center', ...style }}
     >
-      {file.icon} {label}
+      <span className="material-symbols-outlined" style={{ fontSize: '1rem' }}>download</span>
+      {label}
     </a>
   )
 }
@@ -47,7 +52,7 @@ export function BentoMainCard({ section }: { section: Section }) {
         <div>
           <h3 className="bento-card-main-title">{section.title}</h3>
           <p className="bento-card-main-desc">
-            La version la plus récente, optimisée pour l'immersion narrative.
+            {section.description || "La version la plus récente, optimisée pour l'immersion narrative."}
           </p>
         </div>
 
@@ -72,19 +77,23 @@ export function BentoSideCard({ section }: { section: Section }) {
         <span className="bento-card-side-icon">{section.icon}</span>
         <h3 className="bento-card-side-title">{section.title}</h3>
         <p className="bento-card-side-desc">
-          Tous les plans disponibles pour naviguer dans l'univers de A/Normal.
+          {section.description || "Tous les plans disponibles pour naviguer dans l'univers de A/Normal."}
         </p>
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
         {section.files.map((file, i) => {
-          const label = file.label || extractNameFromPath(file.path)
+          const label    = file.label || extractNameFromPath(file.path)
+          const href     = getPublicAssetPath(file.path)
+          const external = isExternalUrl(file.path)
+
           return (
             <a
               key={i}
-              href={file.path}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={href}
+              download={external ? undefined : ''}
+              target={external ? '_blank' : undefined}
+              rel={external ? 'noopener noreferrer' : undefined}
               className="download"
             >
               {file.icon} {label}

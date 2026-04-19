@@ -16,3 +16,15 @@ export function getFileType(filePath: string): string {
   }
   return map[ext] ?? 'Fichier'
 }
+
+export function isExternalUrl(filePath: string): boolean {
+  return /^(?:[a-z][a-z\d+.-]*:)?\/\//i.test(filePath)
+}
+
+export function getPublicAssetPath(filePath: string): string {
+  if (isExternalUrl(filePath) || filePath.startsWith('/')) {
+    return filePath
+  }
+
+  return `${import.meta.env.BASE_URL}${filePath}`
+}

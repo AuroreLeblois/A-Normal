@@ -4,9 +4,9 @@ import { BMC_URL } from '../constants/links'
 /* ── Statistiques ───────────────────────────────────────────── */
 const STATS = [
   { value: '12',  label: 'Sessions jouées' },
-  { value: '142', label: 'Pages de contenu' },
+  { value: '200', label: 'Pages de contenu' },
   { value: '16',  label: 'Ressources libres' },
-  { value: '20',  label: 'PNJ archivés'     },
+  { value: '13',  label: 'PNJ archivés'     },
 ]
 
 /* ── Passions / tags ────────────────────────────────────────── */
@@ -29,6 +29,18 @@ const ANECDOTES = [
     label: 'Première session',
     title: 'La Première Session',
     text: "La première session a duré huit heures. Neuf joueurs, plein d'émotions, des avis divergents et des questions toujours plus profondes.",
+  },
+  {
+    icon: '🤩',
+    label: 'La publication',
+    title: 'La publication',
+    text: "Les livrets seront en vente le 15 mai 2026 sur Amazon. Une grande étape vient d'être franchie!",
+  },
+  {
+    icon: '🎮',
+    label: 'Le jeu steam',
+    title: 'Le jeu steam',
+    text: "Le jeu qui parle de l'univers avant les évènements du jeu de rôle est en cours de développement.",
   },
 ]
 

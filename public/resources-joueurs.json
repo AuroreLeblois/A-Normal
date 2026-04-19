@@ -1,34 +1,50 @@
 {
   "sections": [
     {
-      "id": "joueurs",
-      "title": "Pour les joueurs",
-      "icon": "🎲",
+      "id": "livret-joueur",
+      "title": "Livret du joueur",
+      "description": "Le livret complet pour préparer votre personnage, prendre en main les bases du jeu et garder les règles essentielles sous la main.",
+      "icon": "📖",
       "direction": "left",
       "delay": 100,
       "files": [
         {
+          "path": "pdf/livrets/A-NORMAL-livret-joueur.pdf",
+          "icon": "📖",
+          "label": "Télécharger (PDF)"
+        }
+      ]
+    },
+    {
+      "id": "fiche-joueur",
+      "title": "Fiche personnage",
+      "description": "La fiche vierge à imprimer ou compléter pour créer rapidement un nouveau personnage.",
+      "icon": "📄",
+      "direction": "right",
+      "delay": 200,
+      "files": [
+        {
           "path": "pdf/vierges/Fiche-joueur-vierge.pdf",
           "icon": "📄",
-          "label": "Fiche personnage vierge"
+          "label": "Fiche vierge"
         }
-      ],
-      "placeholder": "À venir (à la sortie du livret)"
+      ]
     },
     {
       "id": "plans",
       "title": "Plans",
+      "description": "Tous les plans disponibles pour naviguer dans l'univers de A/Normal.",
       "icon": "🗺️",
       "direction": "right",
       "delay": 300,
       "files": [
         {
-          "path": "pdf/Plans/Vile_de_départ.png",
+          "path": "pdf/plans/Ville_de_départ.png",
           "icon": "📍​",
           "label": "Ville de départ"
         },
         {
-          "path": "pdf/Plans/Plan_place_Publique.png",
+          "path": "pdf/plans/Plan_Place_Publique.png",
           "icon": "🏙️",
           "label": "Place publique"
         }

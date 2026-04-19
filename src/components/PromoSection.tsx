@@ -1,6 +1,7 @@
 import { SlideAnimation, Button } from 'react-kariu'
 
 function PromoSection() {
+  return null;
   return (
     <SlideAnimation direction="bottom" duration={600} delay={400} trigger={true}>
       <div className="promo-section">
