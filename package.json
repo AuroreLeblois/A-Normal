@@ -1,6 +1,6 @@
 {
   "name": "a-normal",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "description": "Site de téléchargement de ressources PDF pour le jeu de rôle A/Normal par Aurore Darcissac",
   "scripts": {
