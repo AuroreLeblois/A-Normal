@@ -24,8 +24,11 @@ export default defineConfig(({ command }) => ({
     VitePWA({
       registerType: 'autoUpdate',
       // Différer l'inscription du SW pour ne pas bloquer le rendu
-      injectRegister: 'script-defer',
+      injectRegister: null,
       workbox: {
+        cleanupOutdatedCaches: true,
+        clientsClaim: true,
+        skipWaiting: true,
         // Assets JS/CSS avec hash - cache longue durée (1 an)
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2}'],
         runtimeCaching: [
@@ -56,9 +59,10 @@ export default defineConfig(({ command }) => ({
           {
             // Fichiers JSON (données) - StaleWhileRevalidate (rafraîchit en arrière-plan)
             urlPattern: /\.json$/,
-            handler: 'StaleWhileRevalidate',
+            handler: 'NetworkFirst',
             options: {
               cacheName: 'json-data',
+              networkTimeoutSeconds: 5,
               expiration: {
                 maxEntries: 20,
                 maxAgeSeconds: 60 * 60 * 24 // 1 jour
@@ -68,9 +72,10 @@ export default defineConfig(({ command }) => ({
           {
             // PDFs - CacheFirst (7 jours)
             urlPattern: /\.pdf$/,
-            handler: 'CacheFirst',
+            handler: 'NetworkFirst',
             options: {
               cacheName: 'pdf-files',
+              networkTimeoutSeconds: 8,
               expiration: {
                 maxEntries: 50,
                 maxAgeSeconds: 60 * 60 * 24 * 7 // 7 jours
