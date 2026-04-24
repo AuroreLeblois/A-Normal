@@ -1,23 +1,24 @@
 import { Link } from 'react-router-dom'
+import { formatTemplate, getTranslations } from '../i18n'
+import { useLocale } from '../hooks/useLocale'
 
 function Footer() {
   const currentYear = new Date().getFullYear()
+  const [locale] = useLocale()
+  const t = getTranslations(locale)
 
   return (
     <footer className="site-footer">
-
-      {/* ── Gauche : marque ── */}
       <div className="footer-brand">
-        <span className="footer-brand-name">A/Normal Archive</span>
+        <span className="footer-brand-name">{t.footer.brand}</span>
         <span className="footer-copyright">
-          © {currentYear} Aurore Darcissac — Tous droits réservés.
+          {formatTemplate(t.footer.copyrightTemplate, { year: currentYear })}
         </span>
       </div>
 
-      {/* ── Centre : liens ── */}
       <nav className="footer-links">
         <Link className="footer-link" to="/mentions-legales">
-          Mentions légales
+          {t.footer.legal}
         </Link>
         <a
           className="footer-link"
@@ -25,17 +26,13 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Soutenir
+          {t.footer.support}
         </a>
       </nav>
 
-      {/* ── Droite : CTA soutien ── */}
       <div className="footer-support">
-        <span className="footer-tagline">
-          Ces documents sont offerts avec l'achat du livret officiel.
-        </span>
+        <span className="footer-tagline">{t.footer.tagline}</span>
       </div>
-
     </footer>
   )
 }

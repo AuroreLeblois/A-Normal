@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { SlideAnimation, Title, Button } from 'react-kariu'
+import { getTranslations } from '../i18n'
+import { useLocale } from '../hooks/useLocale'
 
 const AMAZON_LAUNCH_TIMESTAMP = new Date('2026-05-15T00:00:00+02:00').getTime()
 
@@ -16,6 +18,8 @@ function getDurationParts(durationMs: number) {
 
 function HeroSection() {
   const navigate = useNavigate()
+  const [locale] = useLocale()
+  const t = getTranslations(locale)
   const [timeDeltaMs, setTimeDeltaMs] = useState(() => AMAZON_LAUNCH_TIMESTAMP - Date.now())
 
   useEffect(() => {
@@ -39,28 +43,24 @@ function HeroSection() {
 
       <SlideAnimation direction="bottom" duration={700} delay={150} trigger={true}>
         <div className="hero-content">
-          <span className="hero-eyebrow">Ressources officielles</span>
+          <span className="hero-eyebrow">{t.home.hero.eyebrow}</span>
 
           <div className="hero-main-row">
             <div className="hero-main-copy">
-              <Title priority={1} text="A NORMAL :" className="hero-title" />
-              <Title priority={2} text="L'Archive des Ressources Officielles" className="hero-title-sub" />
+              <Title priority={1} text={t.home.hero.title} className="hero-title" />
+              <Title priority={2} text={t.home.hero.subtitle} className="hero-title-sub" />
 
-              <p className="hero-body">
-                Plongez dans les strates d'un monde onirique et brutal.
-                Les archives du jeu de rôle d'Aurore Darcissac - fiches, plans,
-                scénarios et outils pour enrichir chaque session.
-              </p>
+              <p className="hero-body">{t.home.hero.body}</p>
 
               <div className="hero-cta">
                 <Button
-                  label="🎲 Espace Meneur de Jeu"
+                  label={`🎲 ${t.home.hero.ctaGm}`}
                   primary
                   className="btn-primary"
                   onClick={() => navigate('/meneur')}
                 />
                 <Button
-                  label="🎯 Espace Joueurs"
+                  label={`🎯 ${t.home.hero.ctaPlayers}`}
                   className="btn-outline"
                   onClick={() => navigate('/joueurs')}
                 />
@@ -69,24 +69,24 @@ function HeroSection() {
 
             <div className="launch-countdown" role="status" aria-live="polite">
               <span className="launch-countdown-label">
-                {isLive ? 'Livre en ligne depuis' : 'Lancement Amazon dans'}
+                {isLive ? t.home.hero.countdownAfter : t.home.hero.countdownBefore}
               </span>
               <div className="launch-countdown-grid">
                 <div className="launch-countdown-item">
                   <span className="launch-countdown-value">{countdown.days}</span>
-                  <span className="launch-countdown-unit">jours</span>
+                  <span className="launch-countdown-unit">{t.home.hero.units.days}</span>
                 </div>
                 <div className="launch-countdown-item">
                   <span className="launch-countdown-value">{countdown.hours}</span>
-                  <span className="launch-countdown-unit">heures</span>
+                  <span className="launch-countdown-unit">{t.home.hero.units.hours}</span>
                 </div>
                 <div className="launch-countdown-item">
                   <span className="launch-countdown-value">{countdown.minutes}</span>
-                  <span className="launch-countdown-unit">minutes</span>
+                  <span className="launch-countdown-unit">{t.home.hero.units.minutes}</span>
                 </div>
                 <div className="launch-countdown-item">
                   <span className="launch-countdown-value">{countdown.seconds}</span>
-                  <span className="launch-countdown-unit">secondes</span>
+                  <span className="launch-countdown-unit">{t.home.hero.units.seconds}</span>
                 </div>
               </div>
             </div>

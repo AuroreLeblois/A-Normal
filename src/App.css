@@ -110,6 +110,36 @@ h1, h2, h3, h4, h5 { font-weight: inherit; margin: 0; }
 .nav-left  { display: flex; align-items: center; gap: 2rem; }
 .nav-right { display: flex; align-items: center; gap: 0.75rem; }
 
+.nav-lang-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--f-label);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(229, 226, 225, 0.7);
+}
+
+.nav-lang-select {
+  background: var(--surface-low);
+  color: var(--on-surface);
+  border: 1px solid rgba(255, 220, 161, 0.25);
+  border-radius: 9999px;
+  padding: 0.3rem 0.65rem;
+  font-family: var(--f-label);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+}
+
+.nav-lang-select:focus {
+  border-color: rgba(255, 184, 0, 0.6);
+  box-shadow: 0 0 0 2px rgba(255, 184, 0, 0.15);
+}
+
 .nav-logo {
   font-family: var(--f-label);
   font-size: 1.4rem;
@@ -187,6 +217,7 @@ h1, h2, h3, h4, h5 { font-weight: inherit; margin: 0; }
 
 @media (max-width: 768px) {
   .nav-links { display: none; }
+  .nav-lang-label span { display: none; }
 }
 
 /* ── 5. WRAPPER CONTENU (compense la nav fixe) ──────────────────── */
