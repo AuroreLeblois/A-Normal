@@ -1,15 +1,19 @@
 import { Link } from 'react-router-dom'
-import { ResourcesConfig } from '../types'
-import ResourceSection from '../components/ResourceSection'
+import { SlideAnimation } from 'react-kariu'
+import ErrorBanner from '../components/ErrorBanner'
 import MJGate from '../components/MJGate'
 import PageHeader from '../components/PageHeader'
 import PromoSection from '../components/PromoSection'
-import ErrorBanner from '../components/ErrorBanner'
-import { SlideAnimation } from 'react-kariu'
+import ResourceSection from '../components/ResourceSection'
 import { useFetchJson } from '../hooks/useFetchJson'
+import { useLocale } from '../hooks/useLocale'
 import { useSessionStorage } from '../hooks/useSessionStorage'
+import { getTranslations } from '../i18n'
+import { ResourcesConfig } from '../types'
 
 function MJPage() {
+  const [locale] = useLocale()
+  const t = getTranslations(locale)
   const [isMJConfirmed, setIsMJConfirmed] = useSessionStorage('mj-confirmed', false)
 
   const { data: config, error } = useFetchJson<ResourcesConfig>(
@@ -18,40 +22,33 @@ function MJPage() {
 
   const handleConfirmMJ = () => setIsMJConfirmed(true)
 
-  /* ── Écran de garde ── */
   if (!isMJConfirmed) {
     return <MJGate onConfirm={handleConfirmMJ} />
   }
 
-  /* ── Contenu MJ ── */
   return (
     <div className="page-content">
-
       <PageHeader
-        badge="⚠️ Contient des spoilers"
+        badge={t.pages.gm.badge}
         badgeClass="spoiler"
         titleJsx={
           <h1 className="mj-split-title">
-            Espace <span className="accent">Meneur de Jeu</span>
+            {t.pages.gm.titlePrefix} <span className="accent">{t.pages.gm.titleAccent}</span>
           </h1>
         }
-        description="Archives confidentielles réservées aux architectes de l'Étrange.
-          Accédez aux structures narratives, cartographies occultes et dossiers
-          de PNJ pour orchestrer vos sessions."
+        description={t.pages.gm.description}
       />
 
-      {/* ── Retour joueurs ── */}
       <SlideAnimation direction="bottom" duration={500} delay={180} trigger={true}>
         <div style={{ marginBottom: '2rem' }}>
           <Link to="/joueurs" className="mj-back-btn" style={{ display: 'inline-flex', width: 'auto' }}>
-            👥 Je suis un joueur — espace Joueurs
+            {t.pages.gm.backToPlayers}
           </Link>
         </div>
       </SlideAnimation>
 
       {error && <ErrorBanner />}
 
-      {/* ── Grille staggered 3 colonnes ── */}
       {config && (
         <SlideAnimation direction="bottom" duration={600} delay={280} trigger={true}>
           <div className="resource-grid-stagger">
@@ -63,7 +60,6 @@ function MJPage() {
       )}
 
       <PromoSection />
-
     </div>
   )
 }

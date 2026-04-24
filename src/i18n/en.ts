@@ -4,6 +4,10 @@ export const en: TranslationSchema = {
   app: {
     loading: 'Loading the Archive...',
   },
+  common: {
+    fileCountOne: '{count} file',
+    fileCountMany: '{count} files',
+  },
   nav: {
     home: 'Home',
     gm: 'Game Master',
@@ -98,9 +102,21 @@ export const en: TranslationSchema = {
     gm: {
       badge: 'Contains spoilers',
       title: 'Game Master Area',
+      titlePrefix: 'Game Master',
+      titleAccent: 'Area',
       description:
         'Confidential archives for the architects of the strange. Access narrative structures, occult maps and NPC files to run your sessions.',
       backToPlayers: "I am a player - Players area",
+      gate: {
+        title: 'Game Master Area',
+        spoilerBadge: 'Contains spoilers',
+        warningTitle: 'Warning!',
+        warningBody: 'This section contains spoilers intended only for the Game Master.',
+        warningPlayers:
+          'If you are a player, go back to the Players area to preserve your game experience.',
+        confirmCta: 'I am the GM - access content',
+        backCta: 'I am a player, go back',
+      },
     },
     legal: {
       title: 'Legal notice',

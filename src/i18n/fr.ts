@@ -2,6 +2,10 @@ export const fr = {
   app: {
     loading: "Chargement de l'Archive...",
   },
+  common: {
+    fileCountOne: '{count} fichier',
+    fileCountMany: '{count} fichiers',
+  },
   nav: {
     home: 'Accueil',
     gm: 'Meneur de Jeu',
@@ -97,9 +101,22 @@ export const fr = {
     gm: {
       badge: 'Contient des spoilers',
       title: 'Espace Meneur de Jeu',
+      titlePrefix: 'Espace',
+      titleAccent: 'Meneur de Jeu',
       description:
         "Archives confidentielles reservees aux architectes de l'etrange. Accedez aux structures narratives, cartographies occultes et dossiers de PNJ pour orchestrer vos sessions.",
       backToPlayers: 'Je suis un joueur - espace Joueurs',
+      gate: {
+        title: 'Espace Meneur de Jeu',
+        spoilerBadge: 'Contient des spoilers',
+        warningTitle: 'Attention !',
+        warningBody:
+          'Cette section contient des spoilers destines uniquement au Meneur de Jeu.',
+        warningPlayers:
+          "Si vous etes un joueur, retournez a l'espace Joueurs pour preserver votre experience de jeu.",
+        confirmCta: 'Je suis le MJ - acceder au contenu',
+        backCta: 'Je suis un joueur, retourner',
+      },
     },
     legal: {
       title: 'Mentions legales',
