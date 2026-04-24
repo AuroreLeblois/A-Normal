@@ -237,6 +237,18 @@ h1, h2, h3, h4, h5 { font-weight: inherit; margin: 0; }
 .hero-content {
   position: relative;
   z-index: 1;
+  max-width: 1240px;
+  width: 100%;
+}
+
+.hero-main-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+  gap: 2rem;
+  align-items: start;
+}
+
+.hero-main-copy {
   max-width: 720px;
 }
 
@@ -281,6 +293,93 @@ h1, h2, h3, h4, h5 { font-weight: inherit; margin: 0; }
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.launch-countdown {
+  margin-top: 0.75rem;
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, rgba(255, 184, 0, 0.08), rgba(28, 27, 27, 0.85));
+  border: 1px solid rgba(255, 220, 161, 0.25);
+  width: 100%;
+  max-width: 420px;
+  justify-self: end;
+}
+
+.launch-countdown-label {
+  display: block;
+  margin-bottom: 0.85rem;
+  font-family: var(--f-label);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--primary);
+}
+
+.launch-countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.launch-countdown-item {
+  background: rgba(19, 19, 19, 0.75);
+  border: 1px solid rgba(255, 220, 161, 0.16);
+  border-radius: 0.5rem;
+  padding: 0.7rem 0.5rem;
+  text-align: center;
+}
+
+.launch-countdown-value {
+  display: block;
+  font-family: var(--f-headline);
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  font-style: italic;
+  font-weight: 700;
+  color: var(--primary-container);
+  line-height: 1;
+}
+
+.launch-countdown-unit {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: var(--f-label);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--on-surface-var);
+}
+
+.launch-countdown-date {
+  margin-top: 0.85rem;
+  font-size: 0.82rem;
+  color: rgba(229, 226, 225, 0.72);
+}
+
+.launch-countdown-live {
+  margin: 0;
+  font-family: var(--f-headline);
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--primary-container);
+}
+
+@media (max-width: 640px) {
+  .hero-main-row {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .launch-countdown {
+    margin-top: 0;
+    max-width: 100%;
+    justify-self: start;
+  }
+
+  .launch-countdown-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 /* ── 8. BOUTONS ─────────────────────────────────────────────────── */
