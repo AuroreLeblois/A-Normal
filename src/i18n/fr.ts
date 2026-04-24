@@ -174,6 +174,82 @@ export const fr = {
         },
       },
     },
+    about: {
+      hero: {
+        eyebrow: 'A Propos',
+        titleTop: "L'origine d'",
+        titleAccent: 'A/NORMAL',
+        body:
+          "A/Normal est un jeu de role cree par Aurore Darcissac - une exploration des frontieres entre le reel et l'etrange, ou chaque session tisse une histoire unique entre enquete psychologique et horreur lovecraftienne. Cette archive rassemble toutes les ressources pour jouer, maitriser et enrichir votre table.",
+        portraitAlt: 'Aurore Darcissac',
+      },
+      stats: [
+        { value: '12', label: 'Sessions jouees' },
+        { value: '200', label: 'Pages de contenu' },
+        { value: '16', label: 'Ressources libres' },
+        { value: '13', label: 'PNJ archives' },
+      ],
+      author: {
+        eyebrow: 'La creatrice',
+        title: "L'Esprit derriere l'Anormalite",
+        paragraph1:
+          "Aurore Darcissac est autrice, game designer et Meneuse de Jeu passionnee. Depuis 2 ans, elle developpe l'univers de A/Normal - un monde ou les anormalites humaines ne sont pas des maledictions, mais les seules cles capables d'ouvrir les portes de l'avenir.",
+        paragraph2:
+          "Formee aux arts narratifs et a l'ecriture de scenario, elle conçoit chaque ressource de cette archive comme un objet litteraire a part entiere : soigne, coherent, et pense pour nourrir l'imagination de ceux qui osent s'asseoir autour de la table.",
+        quote: 'Ce que nous appelons anormal n est que la preuve que le monde ne tient pas debout.',
+        portraitAlt: 'Portrait de Aurore Darcissac',
+      },
+      anecdotes: {
+        eyebrow: "Archives d'A/Normal",
+        items: [
+          {
+            icon: '📝',
+            label: 'Genese',
+            title: 'La Genese',
+            text: "Tout a commence sur un bloc-notes et une question : et si l'anormalite n'etait pas un defaut, mais une cle ? A/Normal est ne de ce questionnement.",
+          },
+          {
+            icon: '🎲',
+            label: 'Premiere session',
+            title: 'La Premiere Session',
+            text: "La premiere session a dure huit heures. Neuf joueurs, plein d'emotions, des avis divergents et des questions toujours plus profondes.",
+          },
+          {
+            icon: '📘',
+            label: 'La publication',
+            title: 'La publication',
+            text: "Les livrets seront en vente le 15 mai 2026 sur Amazon. Une grande etape vient d'etre franchie.",
+          },
+          {
+            icon: '🕹️',
+            label: 'Le jeu Steam',
+            title: 'Le jeu Steam',
+            text: "Le jeu qui parle de l'univers avant les evenements du jeu de role est en cours de developpement.",
+          },
+        ],
+      },
+      passions: {
+        eyebrow: 'Influences & Obsessions',
+        title: 'Horizons & Obsessions',
+        tags: [
+          'Dystopie',
+          'Litterature noire',
+          'Jeu de role narratif',
+          'Worldbuilding',
+          'Musique ambiante',
+          'Cinema de genre',
+          'Ecriture collaborative',
+          'Folklore europeen',
+        ],
+      },
+      cta: {
+        title: "Ne restez pas seul face a l'obscurite",
+        body:
+          "Chaque don est une etincelle dans l'obscurite. Votre soutien permet de financer les illustrations, l'ecriture et l'hebergement de ces ressources gratuites pour tous.",
+        supportCta: 'Soutenir le projet',
+        discordCta: 'Rejoindre le Discord',
+      },
+    },
   },
 } as const
 

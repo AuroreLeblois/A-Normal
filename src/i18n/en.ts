@@ -174,5 +174,81 @@ export const en: TranslationSchema = {
         },
       },
     },
+    about: {
+      hero: {
+        eyebrow: 'About',
+        titleTop: 'The origin of',
+        titleAccent: 'A/NORMAL',
+        body:
+          'A/Normal is a role-playing game created by Aurore Darcissac - an exploration of the border between the real and the strange, where each session weaves a unique story between psychological investigation and Lovecraftian horror. This archive gathers all resources to play, run, and enrich your table.',
+        portraitAlt: 'Aurore Darcissac',
+      },
+      stats: [
+        { value: '12', label: 'Sessions played' },
+        { value: '200', label: 'Pages of content' },
+        { value: '16', label: 'Free resources' },
+        { value: '13', label: 'Archived NPCs' },
+      ],
+      author: {
+        eyebrow: 'The creator',
+        title: 'The Mind Behind Anormality',
+        paragraph1:
+          'Aurore Darcissac is an author, game designer, and passionate Game Master. For two years, she has been developing the A/Normal universe - a world where human anomalies are not curses, but the only keys able to open the doors to the future.',
+        paragraph2:
+          'Trained in narrative arts and screenwriting, she designs each archive resource as a literary object in its own right: polished, coherent, and crafted to fuel the imagination of those who dare sit around the table.',
+        quote: 'What we call abnormal is only proof that the world does not stand upright.',
+        portraitAlt: 'Portrait of Aurore Darcissac',
+      },
+      anecdotes: {
+        eyebrow: "A/Normal Archive",
+        items: [
+          {
+            icon: '📝',
+            label: 'Genesis',
+            title: 'The Genesis',
+            text: 'It all started on a notepad and one question: what if anomaly was not a flaw, but a key? A/Normal was born from that thought.',
+          },
+          {
+            icon: '🎲',
+            label: 'First session',
+            title: 'The First Session',
+            text: 'The first session lasted eight hours. Nine players, strong emotions, diverging views, and ever deeper questions.',
+          },
+          {
+            icon: '📘',
+            label: 'Publication',
+            title: 'Publication',
+            text: 'The booklets will be released on Amazon on May 15, 2026. A major milestone has just been reached.',
+          },
+          {
+            icon: '🕹️',
+            label: 'Steam game',
+            title: 'Steam game',
+            text: 'The game exploring the universe before the role-playing game events is currently in development.',
+          },
+        ],
+      },
+      passions: {
+        eyebrow: 'Influences & Obsessions',
+        title: 'Horizons & Obsessions',
+        tags: [
+          'Dystopia',
+          'Noir literature',
+          'Narrative role-playing',
+          'Worldbuilding',
+          'Ambient music',
+          'Genre cinema',
+          'Collaborative writing',
+          'European folklore',
+        ],
+      },
+      cta: {
+        title: 'Do not face the darkness alone',
+        body:
+          'Every donation is a spark in the dark. Your support helps fund illustrations, writing, and hosting for these free resources.',
+        supportCta: 'Support the project',
+        discordCta: 'Join Discord',
+      },
+    },
   },
 }
