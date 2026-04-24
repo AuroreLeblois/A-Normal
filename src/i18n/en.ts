@@ -122,6 +122,57 @@ export const en: TranslationSchema = {
       title: 'Legal notice',
       description:
         'Information related to the A/Normal website, available resources, and terms of use for downloadable files.',
+      featured: {
+        eyebrow: 'Use of resources',
+        title: 'Resources included with the official booklet',
+        paragraph1:
+          'The resources available on this website are provided to support the purchase and use of the official A/Normal book. They may be downloaded, printed, and used for private or community tabletop sessions of the A/Normal role-playing game.',
+        paragraph2:
+          'Any reproduction, redistribution, modification, or reuse of these resources for sale, integration into a commercial offer, or commercialization in any form is strictly prohibited without prior written authorization from the author.',
+      },
+      sections: {
+        publisher: {
+          eyebrow: 'Website publisher',
+          title: 'A/NORMAL',
+          paragraph1:
+            'The A/NORMAL website is published by Aurore Darcissac, author and creator of the A/NORMAL universe.',
+          paragraph2: 'Publishing director: Aurore Darcissac.',
+        },
+        copyright: {
+          eyebrow: 'Intellectual property',
+          title: 'Copyright',
+          paragraph1:
+            'Texts, characters, resources, sheets, maps, illustrations, names, and elements of the A/Normal universe shown on this website are protected by copyright, unless explicitly stated otherwise.',
+          paragraph2:
+            'No transfer of rights is granted by downloading files. Access to documents authorizes personal use only within the game context.',
+        },
+        liability: {
+          eyebrow: 'Liability',
+          title: 'Website content',
+          paragraph1:
+            'Information and files are provided to support playing A/Normal. The publisher strives to keep resources accessible and up to date, without guaranteeing the permanent absence of errors, interruptions, or unavailability.',
+        },
+        externalLinks: {
+          eyebrow: 'External links',
+          title: 'Third-party websites',
+          paragraph1:
+            'The website may contain links to external services, including Discord, Buy Me a Coffee, or sales platforms. These websites have their own terms of use and privacy policies.',
+        },
+        personalData: {
+          eyebrow: 'Personal data',
+          title: 'Data collection',
+          paragraph1:
+            'A/Normal does not provide user accounts and does not directly collect personal data through forms on this website.',
+          paragraph2:
+            'External services accessible from this website may process data according to their own policies.',
+        },
+        hosting: {
+          eyebrow: 'Hosting',
+          title: 'Technical provider',
+          paragraph1:
+            'The website is hosted via GitHub Pages, a service provided by GitHub, Inc., 88 Colin P. Kelly Jr Street, San Francisco, CA 94107, United States.',
+        },
+      },
     },
   },
 }
