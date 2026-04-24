@@ -66,6 +66,34 @@ export const en: TranslationSchema = {
       title: 'Players Area',
       description:
         'Prepare your next session with our archive of essential tools. Everything you need to bring your character to life and navigate the darkness.',
+      bento: {
+        featuredLabel: 'Featured',
+        mainFallbackDescription: 'The latest version, optimized for narrative immersion.',
+        sideFallbackDescription: 'All available maps to navigate the A/Normal universe.',
+        playerSheetAlt: 'Player sheet preview',
+      },
+      characterGenerator: {
+        title: 'Character Generator',
+        description: 'Randomly roll gender, age, known anomaly, and unknown anomaly for your character.',
+      },
+      randomizer: {
+        title: 'Character roll helper',
+        rolling: 'Rolling...',
+        roll: 'Roll',
+        genderLabel: 'Gender',
+        ageLabel: 'Age',
+        yearsSuffix: 'years',
+        male: 'Male',
+        female: 'Female',
+        knownAnomalyLabel: 'Known anomaly',
+        unknownAnomalyLabel: 'Unknown anomaly',
+        pointsSuffix: 'pts',
+      },
+      community: {
+        title: 'Community Resources',
+        description: 'Find hundreds of sheets created by the community on our Discord.',
+        cta: 'Join Discord',
+      },
     },
     gm: {
       badge: 'Contains spoilers',

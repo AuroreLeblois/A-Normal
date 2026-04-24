@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { HoverAnimation, Title } from 'react-kariu'
 import { useFetchJson } from '../hooks/useFetchJson'
+import { useLocale } from '../hooks/useLocale'
+import { getTranslations } from '../i18n'
 
-interface Anormalite {
+interface Anomaly {
   id: string
   nom: string
   points: string
@@ -11,31 +13,33 @@ interface Anormalite {
   note?: string
 }
 
-interface AnormalitesData {
-  anormalites: Anormalite[]
+interface AnomaliesData {
+  anormalites: Anomaly[]
 }
 
 interface CharacterResult {
-  gender: 'homme' | 'femme'
+  gender: 'male' | 'female'
   age: number
-  anormaliteConnue: Anormalite | null
-  anormaliteInconnue: Anormalite | null
+  knownAnomaly: Anomaly | null
+  unknownAnomaly: Anomaly | null
 }
 
 function CharacterRandomizer() {
-  const [result, setResult]     = useState<CharacterResult | null>(null)
+  const [locale] = useLocale()
+  const t = getTranslations(locale)
+  const [result, setResult] = useState<CharacterResult | null>(null)
   const [isRolling, setIsRolling] = useState(false)
 
-  const { data } = useFetchJson<AnormalitesData>(`${import.meta.env.BASE_URL}anormalites.json`)
-  const anormalites = data?.anormalites ?? []
+  const { data } = useFetchJson<AnomaliesData>(`${import.meta.env.BASE_URL}anormalites.json`)
+  const anomalies = data?.anormalites ?? []
 
-  const getRandomAnormalites = (): { connue: Anormalite; inconnue: Anormalite } => {
-    const shuffled = [...anormalites].sort(() => Math.random() - 0.5)
-    return { connue: shuffled[0], inconnue: shuffled[1] }
+  const getRandomAnomalies = (): { known: Anomaly; unknown: Anomaly } => {
+    const shuffled = [...anomalies].sort(() => Math.random() - 0.5)
+    return { known: shuffled[0], unknown: shuffled[1] }
   }
 
   const rollCharacter = () => {
-    if (anormalites.length < 2) return
+    if (anomalies.length < 2) return
 
     setIsRolling(true)
 
@@ -43,14 +47,14 @@ function CharacterRandomizer() {
     const maxRolls = 10
 
     const interval = setInterval(() => {
-      const { connue, inconnue } = getRandomAnormalites()
+      const { known, unknown } = getRandomAnomalies()
       setResult({
-        gender: Math.random() < 0.5 ? 'homme' : 'femme',
+        gender: Math.random() < 0.5 ? 'male' : 'female',
         age: Math.floor(Math.random() * (109 - 15 + 1)) + 15,
-        anormaliteConnue: connue,
-        anormaliteInconnue: inconnue,
+        knownAnomaly: known,
+        unknownAnomaly: unknown,
       })
-      rolls++
+      rolls += 1
 
       if (rolls >= maxRolls) {
         clearInterval(interval)
@@ -59,28 +63,27 @@ function CharacterRandomizer() {
     }, 80)
   }
 
+  const genderLabel = result?.gender === 'male' ? t.pages.players.randomizer.male : t.pages.players.randomizer.female
+
   return (
     <div className="randomizer-container">
-      <Title priority={4} text="🎲 Aide au tirage de personnage" align="center" />
+      <Title priority={4} text={t.pages.players.randomizer.title} align="center" />
 
       <div className="randomizer-buttons">
         <HoverAnimation duration={200} intensity={0.55} type="scale" className="randomizer-btn-container">
           <button
             className={`randomizer-btn ${isRolling ? 'rolling' : ''}`}
             onClick={rollCharacter}
-            disabled={isRolling || anormalites.length < 2}
+            disabled={isRolling || anomalies.length < 2}
           >
-            {isRolling ? '🎲 Tirage...' : '🎲 Tirer'}
+            {isRolling ? t.pages.players.randomizer.rolling : t.pages.players.randomizer.roll}
           </button>
         </HoverAnimation>
 
         {result && !isRolling && (
           <HoverAnimation duration={200} intensity={0.55} type="scale">
-            <button
-              className="randomizer-btn clear-btn"
-              onClick={() => setResult(null)}
-            >
-              🗑️
+            <button className="randomizer-btn clear-btn" onClick={() => setResult(null)}>
+              X
             </button>
           </HoverAnimation>
         )}
@@ -89,29 +92,33 @@ function CharacterRandomizer() {
       {result && (
         <div className={`randomizer-result ${isRolling ? 'rolling' : ''}`}>
           <div className="result-item">
-            <span className="result-label">Genre</span>
-            <span className="result-value">
-              {result.gender === 'homme' ? '👨' : '👩'} {result.gender.charAt(0).toUpperCase() + result.gender.slice(1)}
-            </span>
+            <span className="result-label">{t.pages.players.randomizer.genderLabel}</span>
+            <span className="result-value">{genderLabel}</span>
           </div>
           <div className="result-item">
-            <span className="result-label">Âge</span>
-            <span className="result-value">🎂 {result.age} ans</span>
+            <span className="result-label">{t.pages.players.randomizer.ageLabel}</span>
+            <span className="result-value">
+              {result.age} {t.pages.players.randomizer.yearsSuffix}
+            </span>
           </div>
 
-          {result.anormaliteConnue && (
+          {result.knownAnomaly && (
             <div className="result-item anormalite connue">
-              <span className="result-label">👁️ Anormalité connue</span>
-              <span className="result-value anormalite-nom">{result.anormaliteConnue.nom}</span>
-              <span className="anormalite-points">{result.anormaliteConnue.points} pts</span>
+              <span className="result-label">{t.pages.players.randomizer.knownAnomalyLabel}</span>
+              <span className="result-value anormalite-nom">{result.knownAnomaly.nom}</span>
+              <span className="anormalite-points">
+                {result.knownAnomaly.points} {t.pages.players.randomizer.pointsSuffix}
+              </span>
             </div>
           )}
 
-          {result.anormaliteInconnue && (
+          {result.unknownAnomaly && (
             <div className="result-item anormalite inconnue">
-              <span className="result-label">🔒 Anormalité inconnue</span>
-              <span className="result-value anormalite-nom">{result.anormaliteInconnue.nom}</span>
-              <span className="anormalite-points">{result.anormaliteInconnue.points} pts</span>
+              <span className="result-label">{t.pages.players.randomizer.unknownAnomalyLabel}</span>
+              <span className="result-value anormalite-nom">{result.unknownAnomaly.nom}</span>
+              <span className="anormalite-points">
+                {result.unknownAnomaly.points} {t.pages.players.randomizer.pointsSuffix}
+              </span>
             </div>
           )}
         </div>

@@ -64,6 +64,35 @@ export const fr = {
       title: 'Espace Joueurs',
       description:
         "Preparez votre prochaine session avec notre archive d'outils essentiels. Tout le necessaire pour donner vie a votre personnage et naviguer dans l'obscurite.",
+      bento: {
+        featuredLabel: 'Essentiel',
+        mainFallbackDescription: "La version la plus recente, optimisee pour l'immersion narrative.",
+        sideFallbackDescription: "Tous les plans disponibles pour naviguer dans l'univers de A/Normal.",
+        playerSheetAlt: 'Apercu de la fiche joueur',
+      },
+      characterGenerator: {
+        title: 'Generateur de personnage',
+        description:
+          'Tirez aleatoirement genre, age, anormalites connue et inconnue pour votre personnage.',
+      },
+      randomizer: {
+        title: 'Aide au tirage de personnage',
+        rolling: 'Tirage...',
+        roll: 'Tirer',
+        genderLabel: 'Genre',
+        ageLabel: 'Age',
+        yearsSuffix: 'ans',
+        male: 'Homme',
+        female: 'Femme',
+        knownAnomalyLabel: 'Anormalite connue',
+        unknownAnomalyLabel: 'Anormalite inconnue',
+        pointsSuffix: 'pts',
+      },
+      community: {
+        title: 'Ressources communautaires',
+        description: 'Retrouvez des centaines de fiches creees par la communaute sur notre Discord.',
+        cta: 'Rejoindre le Discord',
+      },
     },
     gm: {
       badge: 'Contient des spoilers',
