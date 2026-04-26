@@ -15,7 +15,7 @@ export const en: TranslationSchema = {
     about: 'About',
     support: 'Support',
     languageLabel: 'Language',
-    languageFr: 'Francais',
+    languageFr: 'Français',
     languageEn: 'English',
     homeAriaLabel: 'Home',
     diceAlt: 'die',

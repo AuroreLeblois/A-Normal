@@ -10,18 +10,18 @@ export const fr = {
     home: 'Accueil',
     gm: 'Meneur de Jeu',
     players: 'Joueurs',
-    about: 'A propos',
+    about: 'À propos',
     support: 'Soutenir',
     languageLabel: 'Langue',
-    languageFr: 'Francais',
+    languageFr: 'Français',
     languageEn: 'English',
     homeAriaLabel: 'Accueil',
-    diceAlt: 'de',
+    diceAlt: 'dé',
   },
   footer: {
     brand: 'A/Normal Archive',
-    copyrightTemplate: '{year} Aurore Darcissac - Tous droits reserves.',
-    legal: 'Mentions legales',
+    copyrightTemplate: '{year} Aurore Darcissac - Tous droits réservés.',
+    legal: 'Mentions légales',
     support: 'Soutenir',
     tagline: "Ces documents sont offerts avec l'achat du livret officiel.",
   },
@@ -31,7 +31,7 @@ export const fr = {
       title: 'A NORMAL :',
       subtitle: "L'Archive des Ressources Officielles",
       body:
-        "Plongez dans les strates d'un monde onirique et brutal. Les archives du jeu de role d'Aurore Darcissac - fiches, plans, scenarios et outils pour enrichir chaque session.",
+        "Plongez dans les strates d'un monde onirique et brutal. Les archives du jeu de rôle d'Aurore Darcissac - fiches, plans, scénarios et outils pour enrichir chaque session.",
       ctaGm: 'Espace Meneur de Jeu',
       ctaPlayers: 'Espace Joueurs',
       countdownBefore: 'Lancement Amazon dans',
@@ -45,21 +45,21 @@ export const fr = {
     },
     cards: {
       sectionLabel: 'Navigation',
-      sectionTitle: 'Choisissez votre role',
+      sectionTitle: 'Choisissez votre rôle',
       gm: {
         eyebrow: 'Confidentiel',
         title: 'Espace Meneur de Jeu',
         body:
-          "Archives confidentielles reservees aux architectes de l'etrange. Fiches de PNJ, scenarios et ressources destinees au Meneur.",
+          "Archives confidentielles réservées aux architectes de l'étrange. Fiches de PNJ, scénarios et ressources destinées au Meneur.",
         spoilerWarning: 'Contient des spoilers.',
-        cta: "Acceder a l'espace MJ",
+        cta: "Accéder à l'espace MJ",
       },
       players: {
         eyebrow: 'Ressources libres',
         title: 'Espace Joueurs',
         body:
-          "Fiches de personnage vierges, plans et generateur de personnage aleatoire. Tout ce qu'il vous faut pour creer votre personnage et jouer.",
-        cta: "Acceder a l'espace Joueurs",
+          "Fiches de personnage vierges, plans et générateur de personnage aléatoire. Tout ce qu'il vous faut pour créer votre personnage et jouer.",
+        cta: "Accéder à l'espace Joueurs",
       },
     },
   },
@@ -67,34 +67,34 @@ export const fr = {
     players: {
       title: 'Espace Joueurs',
       description:
-        "Preparez votre prochaine session avec notre archive d'outils essentiels. Tout le necessaire pour donner vie a votre personnage et naviguer dans l'obscurite.",
+        "Préparez votre prochaine session avec notre archive d'outils essentiels. Tout le nécessaire pour donner vie à votre personnage et naviguer dans l'obscurité.",
       bento: {
         featuredLabel: 'Essentiel',
-        mainFallbackDescription: "La version la plus recente, optimisee pour l'immersion narrative.",
+        mainFallbackDescription: "La version la plus récente, optimisée pour l'immersion narrative.",
         sideFallbackDescription: "Tous les plans disponibles pour naviguer dans l'univers de A/Normal.",
-        playerSheetAlt: 'Apercu de la fiche joueur',
+        playerSheetAlt: 'Aperçu de la fiche joueur',
       },
       characterGenerator: {
-        title: 'Generateur de personnage',
+        title: 'Générateur de personnage',
         description:
-          'Tirez aleatoirement genre, age, anormalites connue et inconnue pour votre personnage.',
+          'Tirez aléatoirement genre, âge, anormalités connue et inconnue pour votre personnage.',
       },
       randomizer: {
         title: 'Aide au tirage de personnage',
         rolling: 'Tirage...',
         roll: 'Tirer',
         genderLabel: 'Genre',
-        ageLabel: 'Age',
+        ageLabel: 'Âge',
         yearsSuffix: 'ans',
         male: 'Homme',
         female: 'Femme',
-        knownAnomalyLabel: 'Anormalite connue',
-        unknownAnomalyLabel: 'Anormalite inconnue',
+        knownAnomalyLabel: 'Anormalité connue',
+        unknownAnomalyLabel: 'Anormalité inconnue',
         pointsSuffix: 'pts',
       },
       community: {
         title: 'Ressources communautaires',
-        description: 'Retrouvez des centaines de fiches creees par la communaute sur notre Discord.',
+        description: 'Retrouvez des centaines de fiches créées par la communauté sur notre Discord.',
         cta: 'Rejoindre le Discord',
       },
     },
@@ -104,99 +104,99 @@ export const fr = {
       titlePrefix: 'Espace',
       titleAccent: 'Meneur de Jeu',
       description:
-        "Archives confidentielles reservees aux architectes de l'etrange. Accedez aux structures narratives, cartographies occultes et dossiers de PNJ pour orchestrer vos sessions.",
+        "Archives confidentielles réservées aux architectes de l'étrange. Accédez aux structures narratives, cartographies occultes et dossiers de PNJ pour orchestrer vos sessions.",
       backToPlayers: 'Je suis un joueur - espace Joueurs',
       gate: {
         title: 'Espace Meneur de Jeu',
         spoilerBadge: 'Contient des spoilers',
         warningTitle: 'Attention !',
         warningBody:
-          'Cette section contient des spoilers destines uniquement au Meneur de Jeu.',
+          'Cette section contient des spoilers destinés uniquement au Meneur de Jeu.',
         warningPlayers:
-          "Si vous etes un joueur, retournez a l'espace Joueurs pour preserver votre experience de jeu.",
-        confirmCta: 'Je suis le MJ - acceder au contenu',
+          "Si vous êtes un joueur, retournez à l'espace Joueurs pour préserver votre expérience de jeu.",
+        confirmCta: 'Je suis le MJ - accéder au contenu',
         backCta: 'Je suis un joueur, retourner',
       },
     },
     legal: {
-      title: 'Mentions legales',
+      title: 'Mentions légales',
       description:
-        "Informations relatives au site A/Normal, aux ressources mises a disposition et aux conditions d'utilisation des fichiers telechargeables.",
+        "Informations relatives au site A/Normal, aux ressources mises à disposition et aux conditions d'utilisation des fichiers téléchargeables.",
       featured: {
         eyebrow: 'Utilisation des ressources',
         title: 'Ressources offertes avec le livret officiel',
         paragraph1:
-          "Les ressources proposees sur ce site sont mises a disposition pour accompagner l'achat et l'utilisation du livre officiel A/Normal. Elles peuvent etre telechargees, imprimees et utilisees dans le cadre de parties privees ou associatives du jeu de role A/Normal.",
+          "Les ressources proposées sur ce site sont mises à disposition pour accompagner l'achat et l'utilisation du livre officiel A/Normal. Elles peuvent être téléchargées, imprimées et utilisées dans le cadre de parties privées ou associatives du jeu de rôle A/Normal.",
         paragraph2:
-          "Toute reproduction, redistribution, modification ou reutilisation de ces ressources dans le but de les vendre, de les integrer a une offre commerciale ou de les commercialiser sous quelque forme que ce soit est strictement interdite sans autorisation ecrite prealable de l'autrice.",
+          "Toute reproduction, redistribution, modification ou réutilisation de ces ressources dans le but de les vendre, de les intégrer à une offre commerciale ou de les commercialiser sous quelque forme que ce soit est strictement interdite sans autorisation écrite préalable de l'autrice.",
       },
       sections: {
         publisher: {
-          eyebrow: 'Editeur du site',
+          eyebrow: 'Éditeur du site',
           title: 'A/NORMAL',
           paragraph1:
-            "Le site A/NORMAL est edite par Aurore Darcissac, autrice et creatrice de l'univers A/NORMAL.",
+            "Le site A/NORMAL est édité par Aurore Darcissac, autrice et créatrice de l'univers A/NORMAL.",
           paragraph2: 'Directrice de la publication : Aurore Darcissac.',
         },
         copyright: {
-          eyebrow: 'Propriete intellectuelle',
+          eyebrow: 'Propriété intellectuelle',
           title: "Droits d'auteur",
           paragraph1:
-            "Les textes, personnages, ressources, fiches, plans, illustrations, noms et elements de l'univers A/Normal presents sur ce site sont proteges par le droit d'auteur, sauf mention contraire explicite.",
+            "Les textes, personnages, ressources, fiches, plans, illustrations, noms et éléments de l'univers A/Normal présents sur ce site sont protégés par le droit d'auteur, sauf mention contraire explicite.",
           paragraph2:
-            "Aucune cession de droits n'est accordee par le telechargement des fichiers. L'acces aux documents autorise uniquement leur usage personnel dans le cadre du jeu.",
+            "Aucune cession de droits n'est accordée par le téléchargement des fichiers. L'accès aux documents autorise uniquement leur usage personnel dans le cadre du jeu.",
         },
         liability: {
-          eyebrow: 'Responsabilite',
+          eyebrow: 'Responsabilité',
           title: 'Contenu du site',
           paragraph1:
-            "Les informations et fichiers proposes sont fournis pour faciliter la pratique du jeu A/Normal. L'editeur s'efforce de maintenir les ressources accessibles et a jour, sans garantir l'absence permanente d'erreur, d'interruption ou d'indisponibilite.",
+            "Les informations et fichiers proposés sont fournis pour faciliter la pratique du jeu A/Normal. L'éditeur s'efforce de maintenir les ressources accessibles et à jour, sans garantir l'absence permanente d'erreur, d'interruption ou d'indisponibilité.",
         },
         externalLinks: {
           eyebrow: 'Liens externes',
           title: 'Sites tiers',
           paragraph1:
-            "Le site peut contenir des liens vers des services externes, notamment Discord, Buy Me a Coffee ou des plateformes de vente. Ces sites disposent de leurs propres conditions d'utilisation et politiques de confidentialite.",
+            "Le site peut contenir des liens vers des services externes, notamment Discord, Buy Me a Coffee ou des plateformes de vente. Ces sites disposent de leurs propres conditions d'utilisation et politiques de confidentialité.",
         },
         personalData: {
-          eyebrow: 'Donnees personnelles',
-          title: 'Collecte de donnees',
+          eyebrow: 'Données personnelles',
+          title: 'Collecte de données',
           paragraph1:
-            "A/Normal ne propose pas de compte utilisateur et ne collecte pas de donnees personnelles directement via un formulaire sur ce site.",
+            "A/Normal ne propose pas de compte utilisateur et ne collecte pas de données personnelles directement via un formulaire sur ce site.",
           paragraph2:
-            'Les services externes accessibles depuis le site peuvent toutefois traiter des donnees selon leurs propres regles.',
+            'Les services externes accessibles depuis le site peuvent toutefois traiter des données selon leurs propres règles.',
         },
         hosting: {
-          eyebrow: 'Hebergement',
+          eyebrow: 'Hébergement',
           title: 'Prestataire technique',
           paragraph1:
-            'Le site est heberge via GitHub Pages, service fourni par GitHub, Inc., 88 Colin P. Kelly Jr Street, San Francisco, CA 94107, Etats-Unis.',
+            'Le site est hébergé via GitHub Pages, service fourni par GitHub, Inc., 88 Colin P. Kelly Jr Street, San Francisco, CA 94107, États-Unis.',
         },
       },
     },
     about: {
       hero: {
-        eyebrow: 'A Propos',
+        eyebrow: 'À Propos',
         titleTop: "L'origine d'",
         titleAccent: 'A/NORMAL',
         body:
-          "A/Normal est un jeu de role cree par Aurore Darcissac - une exploration des frontieres entre le reel et l'etrange, ou chaque session tisse une histoire unique entre enquete psychologique et horreur lovecraftienne. Cette archive rassemble toutes les ressources pour jouer, maitriser et enrichir votre table.",
+          "A/Normal est un jeu de rôle créé par Aurore Darcissac - une exploration des frontières entre le réel et l'étrange, où chaque session tisse une histoire unique entre enquête psychologique et horreur lovecraftienne. Cette archive rassemble toutes les ressources pour jouer, maîtriser et enrichir votre table.",
         portraitAlt: 'Aurore Darcissac',
       },
       stats: [
-        { value: '12', label: 'Sessions jouees' },
+        { value: '12', label: 'Sessions jouées' },
         { value: '200', label: 'Pages de contenu' },
         { value: '16', label: 'Ressources libres' },
-        { value: '13', label: 'PNJ archives' },
+        { value: '13', label: 'PNJ archivés' },
       ],
       author: {
-        eyebrow: 'La creatrice',
-        title: "L'Esprit derriere l'Anormalite",
+        eyebrow: 'La créatrice',
+        title: "L'Esprit derrière l'Anormalité",
         paragraph1:
-          "Aurore Darcissac est autrice, game designer et Meneuse de Jeu passionnee. Depuis 2 ans, elle developpe l'univers de A/Normal - un monde ou les anormalites humaines ne sont pas des maledictions, mais les seules cles capables d'ouvrir les portes de l'avenir.",
+          "Aurore Darcissac est autrice, game designer et Meneuse de Jeu passionnée. Depuis 2 ans, elle développe l'univers de A/Normal - un monde où les anormalités humaines ne sont pas des malédictions, mais les seules clés capables d'ouvrir les portes de l'avenir.",
         paragraph2:
-          "Formee aux arts narratifs et a l'ecriture de scenario, elle conçoit chaque ressource de cette archive comme un objet litteraire a part entiere : soigne, coherent, et pense pour nourrir l'imagination de ceux qui osent s'asseoir autour de la table.",
-        quote: 'Ce que nous appelons anormal n est que la preuve que le monde ne tient pas debout.',
+          "Formée aux arts narratifs et à l'écriture de scénario, elle conçoit chaque ressource de cette archive comme un objet littéraire à part entière : soigné, cohérent, et pensé pour nourrir l'imagination de ceux qui osent s'asseoir autour de la table.",
+        quote: "Ce que nous appelons anormal n'est que la preuve que le monde ne tient pas debout.",
         portraitAlt: 'Portrait de Aurore Darcissac',
       },
       anecdotes: {
@@ -204,27 +204,27 @@ export const fr = {
         items: [
           {
             icon: '📝',
-            label: 'Genese',
-            title: 'La Genese',
-            text: "Tout a commence sur un bloc-notes et une question : et si l'anormalite n'etait pas un defaut, mais une cle ? A/Normal est ne de ce questionnement.",
+            label: 'Genèse',
+            title: 'La Genèse',
+            text: "Tout a commencé sur un bloc-notes et une question : et si l'anormalité n'était pas un défaut, mais une clé ? A/Normal est né de ce questionnement.",
           },
           {
             icon: '🎲',
-            label: 'Premiere session',
-            title: 'La Premiere Session',
-            text: "La premiere session a dure huit heures. Neuf joueurs, plein d'emotions, des avis divergents et des questions toujours plus profondes.",
+            label: 'Première session',
+            title: 'La Première Session',
+            text: "La première session a duré huit heures. Neuf joueurs, plein d'émotions, des avis divergents et des questions toujours plus profondes.",
           },
           {
             icon: '📘',
             label: 'La publication',
             title: 'La publication',
-            text: "Les livrets seront en vente le 15 mai 2026 sur Amazon. Une grande etape vient d'etre franchie.",
+            text: "Les livrets seront en vente le 15 mai 2026 sur Amazon. Une grande étape vient d'être franchie.",
           },
           {
             icon: '🕹️',
             label: 'Le jeu Steam',
             title: 'Le jeu Steam',
-            text: "Le jeu qui parle de l'univers avant les evenements du jeu de role est en cours de developpement.",
+            text: "Le jeu qui parle de l'univers avant les événements du jeu de rôle est en cours de développement.",
           },
         ],
       },
@@ -233,19 +233,19 @@ export const fr = {
         title: 'Horizons & Obsessions',
         tags: [
           'Dystopie',
-          'Litterature noire',
-          'Jeu de role narratif',
+          'Littérature noire',
+          'Jeu de rôle narratif',
           'Worldbuilding',
           'Musique ambiante',
-          'Cinema de genre',
-          'Ecriture collaborative',
-          'Folklore europeen',
+          'Cinéma de genre',
+          'Écriture collaborative',
+          'Folklore européen',
         ],
       },
       cta: {
-        title: "Ne restez pas seul face a l'obscurite",
+        title: "Ne restez pas seul face à l'obscurité",
         body:
-          "Chaque don est une etincelle dans l'obscurite. Votre soutien permet de financer les illustrations, l'ecriture et l'hebergement de ces ressources gratuites pour tous.",
+          "Chaque don est une étincelle dans l'obscurité. Votre soutien permet de financer les illustrations, l'écriture et l'hébergement de ces ressources gratuites pour tous.",
         supportCta: 'Soutenir le projet',
         discordCta: 'Rejoindre le Discord',
       },
