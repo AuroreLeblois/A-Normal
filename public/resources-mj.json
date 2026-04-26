@@ -50,6 +50,11 @@
           "path": "pdf/Scénario1/PNJ-Coordinateur.pdf",
           "icon": "🙏💻​",
           "label": "Coordinateur"
+        },
+        {
+          "path": "pdf/Scénario4/Ayame.pdf",
+          "icon": "👤",
+          "label": "Ayame"
         }
       ],
       "placeholder": "À venir (à la sortie du livret)"
