@@ -55,6 +55,11 @@
           "path": "pdf/Scénario4/Ayame.pdf",
           "icon": "🤺",
           "label": "Ayame"
+        },
+        {
+          "path":"pdf/Scénario4/Noriko.pdf",
+          "icon": "👩",
+          "label": "Noriko"
         }
       ],
       "placeholder": "À venir (à la sortie du livret)"
