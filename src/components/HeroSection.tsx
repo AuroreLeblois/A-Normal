@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { SlideAnimation, Title, Button } from 'react-kariu'
+import { AMAZON_MJ_BOOK_URL } from '../constants/links'
 import { getTranslations } from '../i18n'
 import { useLocale } from '../hooks/useLocale'
 
@@ -64,6 +65,13 @@ function HeroSection() {
                   className="btn-outline"
                   onClick={() => navigate('/joueurs')}
                 />
+                {locale === 'fr' && (
+                  <Button
+                    label="📕 Livre MJ sur Amazon"
+                    className="btn-outline"
+                    onClick={() => window.open(AMAZON_MJ_BOOK_URL, '_blank', 'noopener,noreferrer')}
+                  />
+                )}
               </div>
             </div>
 

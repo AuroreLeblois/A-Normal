@@ -1,7 +1,14 @@
 import { SlideAnimation, Button } from 'react-kariu'
+import { AMAZON_MJ_BOOK_URL } from '../constants/links'
+import { useLocale } from '../hooks/useLocale'
 
 function PromoSection() {
-  return null;
+  const [locale] = useLocale()
+
+  if (locale !== 'fr') {
+    return null
+  }
+
   return (
     <SlideAnimation direction="bottom" duration={600} delay={400} trigger={true}>
       <div className="promo-section">
@@ -10,25 +17,19 @@ function PromoSection() {
           <div>
             <span className="promo-badge">Exclusivité</span>
             <h2 className="promo-title">
-              Le Livre Original :<br />
-              <span className="accent">Archives Complètes</span>
+              Le Livre du MJ :<br />
+              <span className="accent">version Amazon</span>
             </h2>
             <p className="promo-desc">
-              Accédez à l'intégralité du texte original.
-              Plus de 300 pages de contenu exclusif, des scénarios inédits et des
-              mécaniques avancées pour les Meneurs de Jeu les plus exigeants.
+              Retrouvez le livret complet du Meneur de Jeu sur Amazon, avec les
+              scénarios, dossiers de PNJ et ressources avancées pour mener vos parties.
             </p>
             <div className="promo-actions">
               <Button
-                label="Télécharger le Livre"
+                label="Voir sur Amazon"
                 primary
                 className="btn-primary"
-                onClick={() => {}}
-              />
-              <Button
-                label="Consulter un Extrait"
-                className="btn-outline"
-                onClick={() => {}}
+                onClick={() => window.open(AMAZON_MJ_BOOK_URL, '_blank', 'noopener,noreferrer')}
               />
             </div>
           </div>
@@ -36,7 +37,7 @@ function PromoSection() {
           <div className="promo-book-visual">
             <div className="promo-book-card">
               📕
-              <span className="promo-book-label">Livre Original</span>
+              <span className="promo-book-label">Livre du MJ</span>
             </div>
           </div>
 
