@@ -37,12 +37,12 @@
           "label": "John Dé"
         },
         {
-          "path": "pdf/Scénario1/Marie.pdf",
+          "path": "pdf/en/Marie.pdf",
           "icon": "👩",
           "label": "Marie"
         },
         {
-          "path": "pdf/Scénario1/Old MCDOnald.pdf",
+          "path": "pdf/en/Old-McDonald.pdf",
           "icon": "🌾",
           "label": "Old MCDonald"
         },
@@ -102,7 +102,7 @@
           "label": "René Lazare"
         },
         {
-          "path": "pdf/Scénarios-variables/Pélagie.pdf",
+          "path": "pdf/en/Pelagie.pdf",
           "icon": "🐙",
           "label": "Pélagie"
         }
