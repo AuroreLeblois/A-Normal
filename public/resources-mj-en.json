@@ -57,7 +57,7 @@
           "label": "Ayame"
         },
         {
-          "path": "pdf/Scénario4/Noriko.pdf",
+          "path": "pdf/en/Noriko.pdf",
           "icon": "👩",
           "label": "Noriko"
         }
@@ -77,12 +77,12 @@
           "label": "Nova"
         },
         {
-          "path": "pdf/Scénario2/Coordinateur.pdf",
+          "path": "pdf/en/Alien-Coordinator.pdf",
           "icon": "🙏🦗",
           "label": "Coordinator"
         },
         {
-          "path": "pdf/Scénarios-variables/Ziggy.pdf",
+          "path": "pdf/en/Ziggy.pdf",
           "icon": "🦎",
           "label": "Ziggy"
         }
@@ -127,7 +127,7 @@
           "label": "SU Sentinel"
         },
         {
-          "path": "pdf/SU-mobs/drone.pdf",
+          "path": "pdf/en/Drone.pdf",
           "icon": "🛸",
           "label": "Drone"
         }
