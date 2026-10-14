@@ -29,6 +29,7 @@ function CharacterRandomizer() {
   const t = getTranslations(locale)
   const [result, setResult] = useState<CharacterResult | null>(null)
   const [isRolling, setIsRolling] = useState(false)
+  const anomalyNames = t.pages.players.randomizer.anomalyNames as Record<string, string>
 
   const { data } = useFetchJson<AnomaliesData>(`${import.meta.env.BASE_URL}anormalites.json`)
   const anomalies = data?.anormalites ?? []
@@ -105,7 +106,9 @@ function CharacterRandomizer() {
           {result.knownAnomaly && (
             <div className="result-item anormalite connue">
               <span className="result-label">{t.pages.players.randomizer.knownAnomalyLabel}</span>
-              <span className="result-value anormalite-nom">{result.knownAnomaly.nom}</span>
+              <span className="result-value anormalite-nom">
+                {anomalyNames[result.knownAnomaly.id] ?? result.knownAnomaly.nom}
+              </span>
               <span className="anormalite-points">
                 {result.knownAnomaly.points} {t.pages.players.randomizer.pointsSuffix}
               </span>
@@ -115,7 +118,9 @@ function CharacterRandomizer() {
           {result.unknownAnomaly && (
             <div className="result-item anormalite inconnue">
               <span className="result-label">{t.pages.players.randomizer.unknownAnomalyLabel}</span>
-              <span className="result-value anormalite-nom">{result.unknownAnomaly.nom}</span>
+              <span className="result-value anormalite-nom">
+                {anomalyNames[result.unknownAnomaly.id] ?? result.unknownAnomaly.nom}
+              </span>
               <span className="anormalite-points">
                 {result.unknownAnomaly.points} {t.pages.players.randomizer.pointsSuffix}
               </span>
