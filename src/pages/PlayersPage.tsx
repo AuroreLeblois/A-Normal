@@ -14,7 +14,7 @@ function PlayersPage() {
   const t = getTranslations(locale)
 
   const { data: config, error } = useFetchJson<ResourcesConfig>(
-    `${import.meta.env.BASE_URL}resources-joueurs.json`
+    `${import.meta.env.BASE_URL}${locale === 'en' ? 'resources-joueurs-en.json' : 'resources-joueurs.json'}`
   )
 
   const mainSection = config?.sections[0]

@@ -1,0 +1,55 @@
+{
+  "sections": [
+    {
+      "id": "player-rulebook",
+      "title": "Player rulebook",
+      "description": "The complete rulebook to prepare your character, learn the basics of the game, and keep the essential rules close at hand.",
+      "icon": "📖",
+      "direction": "left",
+      "delay": 100,
+      "files": [
+        {
+          "path": "pdf/livrets/A-NORMAL-player-rulebook.pdf",
+          "icon": "📖",
+          "label": "Download PDF"
+        }
+      ]
+    },
+    {
+      "id": "character-sheet",
+      "title": "Character sheet",
+      "description": "A blank sheet to print or complete when creating a new character.",
+      "icon": "📄",
+      "direction": "right",
+      "delay": 200,
+      "files": [
+        {
+          "path": "pdf/vierges/Fiche-joueur-vierge.pdf",
+          "icon": "📄",
+          "label": "Blank sheet"
+        }
+      ]
+    },
+    {
+      "id": "maps",
+      "title": "Maps",
+      "description": "All available maps for navigating the A/Normal universe.",
+      "icon": "🗺️",
+      "direction": "right",
+      "delay": 300,
+      "files": [
+        {
+          "path": "pdf/plans/Ville_de_départ.png",
+          "icon": "📍​",
+          "label": "Starting town"
+        },
+        {
+          "path": "pdf/plans/Plan_Place_Publique.png",
+          "icon": "🏙️",
+          "label": "Public square"
+        }
+      ],
+      "placeholder": "Coming soon (with the booklet release)"
+    }
+  ]
+}
