@@ -1,0 +1,138 @@
+{
+  "sections": [
+    {
+      "id": "blank-sheets",
+      "title": "Blank sheets",
+      "icon": "📝",
+      "direction": "left",
+      "delay": 200,
+      "files": [
+        {
+          "path": "pdf/vierges/Fiche-PNJ-vierge.pdf",
+          "icon": "👤",
+          "label": "Blank NPC sheet"
+        },
+        {
+          "path": "pdf/en/Player-Renown.pdf",
+          "icon": "📊",
+          "label": "Player renown sheet"
+        }
+      ]
+    },
+    {
+      "id": "human-npcs",
+      "title": "Human NPCs",
+      "icon": "👤",
+      "direction": "top",
+      "delay": 400,
+      "files": [
+        {
+          "path": "pdf/en/Robin-Dubois.pdf",
+          "icon": "👼",
+          "label": "Robin Dubois"
+        },
+        {
+          "path": "pdf/en/John-De.pdf",
+          "icon": "👨",
+          "label": "John Dé"
+        },
+        {
+          "path": "pdf/Scénario1/Marie.pdf",
+          "icon": "👩",
+          "label": "Marie"
+        },
+        {
+          "path": "pdf/Scénario1/Old MCDOnald.pdf",
+          "icon": "🌾",
+          "label": "Old MCDonald"
+        },
+        {
+          "path": "pdf/en/Coordinator.pdf",
+          "icon": "🙏💻​",
+          "label": "Coordinator"
+        },
+        {
+          "path": "pdf/Scénario4/Ayame.pdf",
+          "icon": "🤺",
+          "label": "Ayame"
+        },
+        {
+          "path": "pdf/Scénario4/Noriko.pdf",
+          "icon": "👩",
+          "label": "Noriko"
+        }
+      ],
+      "placeholder": "Coming soon (with the booklet release)"
+    },
+    {
+      "id": "alien-npcs",
+      "title": "Alien NPCs",
+      "icon": "👽",
+      "direction": "right",
+      "delay": 600,
+      "files": [
+        {
+          "path": "pdf/en/Nova.pdf",
+          "icon": "👾",
+          "label": "Nova"
+        },
+        {
+          "path": "pdf/Scénario2/Coordinateur.pdf",
+          "icon": "🙏🦗",
+          "label": "Coordinator"
+        },
+        {
+          "path": "pdf/Scénarios-variables/Ziggy.pdf",
+          "icon": "🦎",
+          "label": "Ziggy"
+        }
+      ],
+      "placeholder": "Coming soon (with the booklet release)"
+    },
+    {
+      "id": "mutant-npcs",
+      "title": "Mutant NPCs",
+      "icon": "🧬",
+      "direction": "bottom",
+      "delay": 800,
+      "files": [
+        {
+          "path": "pdf/en/Rene-Lazare.pdf",
+          "icon": "🐉",
+          "label": "René Lazare"
+        },
+        {
+          "path": "pdf/Scénarios-variables/Pélagie.pdf",
+          "icon": "🐙",
+          "label": "Pélagie"
+        }
+      ],
+      "placeholder": "Coming soon (with the booklet release)"
+    },
+    {
+      "id": "robots",
+      "title": "Robots",
+      "icon": "🤖",
+      "direction": "bottom",
+      "delay": 800,
+      "files": [
+        {
+          "path": "pdf/en/PURGE.pdf",
+          "icon": "💀",
+          "label": "PURGE"
+        },
+        {
+          "path": "pdf/en/SU-Sentinel.pdf",
+          "icon": "🤖",
+          "label": "SU Sentinel"
+        },
+        {
+          "path": "pdf/SU-mobs/drone.pdf",
+          "icon": "🛸",
+          "label": "Drone"
+        }
+      ],
+      "placeholder": "Coming soon (with the booklet release)"
+    }
+  ]
+}

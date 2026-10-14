@@ -17,7 +17,9 @@ function MJPage() {
   const [isMJConfirmed, setIsMJConfirmed] = useSessionStorage('mj-confirmed', false)
 
   const { data: config, error } = useFetchJson<ResourcesConfig>(
-    isMJConfirmed ? `${import.meta.env.BASE_URL}resources-mj.json` : ''
+    isMJConfirmed
+      ? `${import.meta.env.BASE_URL}${locale === 'en' ? 'resources-mj-en.json' : 'resources-mj.json'}`
+      : ''
   )
 
   const handleConfirmMJ = () => setIsMJConfirmed(true)
