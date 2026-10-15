@@ -8,7 +8,7 @@
       "delay": 200,
       "files": [
         {
-          "path": "pdf/vierges/Fiche-PNJ-vierge.pdf",
+          "path": "pdf/en/Blank-NPC-sheet.pdf",
           "icon": "👤",
           "label": "Blank NPC sheet"
         },
@@ -52,7 +52,7 @@
           "label": "Coordinator"
         },
         {
-          "path": "pdf/Scénario4/Ayame.pdf",
+          "path": "pdf/en/Ayame.pdf",
           "icon": "🤺",
           "label": "Ayame"
         },

@@ -24,7 +24,7 @@
       "delay": 200,
       "files": [
         {
-          "path": "pdf/vierges/Fiche-joueur-vierge.pdf",
+          "path": "pdf/en/Blank-character-sheet.pdf",
           "icon": "📄",
           "label": "Blank sheet"
         }

@@ -1,0 +1,37 @@
+$path = Join-Path (Get-Location) 'Ayame - EN.drawio'
+$xml = [System.IO.File]::ReadAllText($path, [System.Text.Encoding]::UTF8)
+$replacements = [ordered]@{
+  "PNJ -&amp;nbsp;Ayame&amp;nbsp;" = "NPC -&amp;nbsp;Ayame&amp;nbsp;"
+  "45 ans" = "45 years old"
+  "Histoire d&#39;" = "Story of "
+  "CARACTERISTIQUES" = "CHARACTERISTICS"
+  "BONUS JET" = "ROLL BONUS"
+  "INVENTAIRE" = "INVENTORY"
+  "Anormalités" = "Anomalies"
+  "Compétences" = "Skills"
+  "Général" = "General"
+  "Anormal" = "Abnormal"
+  "FORCE" = "STRENGTH"
+  "PERCEPTION" = "PERCEPTION"
+  "SAGESSE" = "WISDOM"
+  "CHARISME" = "CHARISMA"
+  "CONSTITUTION" = "CONSTITUTION"
+  "DEXTERITE" = "DEXTERITY"
+  "INTELLIGENCE" = "INTELLIGENCE"
+  "METIER:" = "PROFESSION:"
+  "PV:" = "HP:"
+  "Niv 3" = "Lvl 3"
+  "Cheffe des camps du Japon" = "Head of the Japanese camps"
+  "Dissidente" = "Dissident"
+  "Insubordonnée" = "Insubordinate"
+  "Altruiste" = "Altruistic"
+  "Costaud" = "Tough"
+  "Vérité forcée" = "Forced Truth"
+  "+1d6 / bonus dextérité ou force" = "+1d6 / Dexterity or Strength bonus"
+  "Ayame Kishima (綾芽 規島) a choisi de quitter T0K10 lorsque les décisions de sa sœur Noriko ont cessé d’être théoriques pour devenir des condamnations bien réelles.&amp;nbsp;" = "Ayame Kishima (綾芽 規島) chose to leave T0K10 when her sister Noriko’s decisions stopped being theoretical and became very real sentences.&amp;nbsp;"
+  "Plutôt que de subir ou de fuir, elle s’est exilée dans les montagnes pour bâtir un camp capable de survivre hors du Système Universel. Là, elle a instauré une règle simple et brutale : seuls ceux capables de tenir peuvent vivre.&amp;nbsp;" = "Rather than submit or flee, she exiled herself to the mountains to build a camp capable of surviving outside the Universal System. There, she established a simple and brutal rule: only those who can endure may live.&amp;nbsp;"
+  "En lien indirect avec Noriko, qui organise les expulsions, Ayame récupère les exilés laissés à proximité, les évalue et tranche sans détour. Elle n’ignore pas la violence de ses choix, mais les considère comme une alternative nécessaire à une exécution certaine. Devenue elle-même anormale pour remplir ce rôle, elle incarne une forme de survie lucide, où l’humanité se mesure à ce que l’on accepte de sacrifier pour la préserver.&lt;br&gt;Contrairement aux autres anormaux, Notiko n&#39;est pas marquée car elle est partie avant d&#39;être rattrapée.&lt;/font&gt;" = "In indirect contact with Noriko, who organizes the expulsions, Ayame takes in exiles left nearby, assesses them, and makes her decisions without hesitation. She does not ignore the violence of her choices, but considers them a necessary alternative to certain execution. Having become abnormal herself to fulfill this role, she embodies a clear-eyed form of survival, in which humanity is measured by what one is willing to sacrifice to preserve it.&lt;br&gt;Unlike the other Abnormals, Noriko is not marked because she left before she could be caught.&lt;/font&gt;"
+}
+foreach ($pair in $replacements.GetEnumerator()) { $xml = $xml.Replace($pair.Key, $pair.Value) }
+[System.IO.File]::WriteAllText($path, $xml, [System.Text.Encoding]::UTF8)
+Write-Output "Translated $($replacements.Count) text entries in $path"
